@@ -55,6 +55,4 @@ gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'haml'
 
-group :production do
-  gem 'pg'
-end
+gem 'pg'
