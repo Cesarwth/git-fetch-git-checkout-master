@@ -6,6 +6,7 @@ default: &default
   password: <%= ENV['DATABASE_PASSWORD'] %>
 
 development:
+  <<: *default
   database: terranova_development
 
 
@@ -13,7 +14,9 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
+  <<: *default
   database: terranova_test
 
 production:
+  <<: *default
   database: terranova

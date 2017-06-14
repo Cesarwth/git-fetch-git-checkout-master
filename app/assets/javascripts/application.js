@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require jquery
 //= require jquery.min
+//= require jquery.easing.min
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
