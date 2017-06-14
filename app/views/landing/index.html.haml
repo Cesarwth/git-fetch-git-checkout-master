@@ -379,7 +379,9 @@
                   Close
     / Plugin JavaScript
     :javascript
-      $('.carousel').carousel({
-          interval: 4000 //changes the speed
-      })
+      $(document).ready( function() {
+        $('.carousel').carousel({
+            interval: 4000 //changes the speed
+        })
+      } );
 
