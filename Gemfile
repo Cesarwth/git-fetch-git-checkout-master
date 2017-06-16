@@ -56,3 +56,5 @@ gem 'jquery-rails'
 gem 'haml'
 
 gem 'pg'
+
+gem 'font-awesome-sass'
