@@ -62,4 +62,10 @@ bower.json
 # Ignore pow environment settings
 .powenv
 
+<<<<<<< HEAD
 .idea/
+=======
+.idea/
+
+database.yml
+>>>>>>> activerecord-models-from-database-schema
