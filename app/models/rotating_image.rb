@@ -1,0 +1,2 @@
+class RotatingImage < ApplicationRecord
+end
