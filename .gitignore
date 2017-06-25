@@ -63,3 +63,5 @@ bower.json
 .powenv
 
 .idea/
+
+database.yml
