@@ -60,3 +60,8 @@ gem 'haml'
 gem 'pg'
 
 gem 'font-awesome-sass'
+
+gem 'activeadmin'
+
+# Plus integrations with:
+gem 'devise'
