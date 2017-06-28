@@ -18,5 +18,5 @@
 //= require bootstrap-sprockets
 //= require jqBootstrapValidation
 //= require contact_me
-//= require freelancer
+//= require freelancer-min.js
 //= require_tree .

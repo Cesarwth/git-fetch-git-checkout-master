@@ -12,6 +12,12 @@
     %link{:href => "https://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic", :rel => "stylesheet", :type => "text/css"}/
 
+
+    %link{:href=>"css/freelancer.min.sass", :rel => "stylesheet"}/
+    %link{:href=>"css/full-slider.sass", :rel => "stylesheet"}/
+
+
+
   %body#page-top.index
     / Menu de navegación
     %nav#mainNav.navbar.navbar-default.navbar-fixed-top.navbar-custom
@@ -28,13 +34,14 @@
               %img.img-responsive{:src => image_url("urbterranova.png"), :style => "vertical-align: middle; height: 100%;"}/
             %td
               .hidden-xs
-                %h4{:style => "padding: 5px;color:white"}
+                %h5{:style => "padding: 5px;color:white"}
                   Urbanización
             %td
               .hidden-xs
-                %h4{:style => "padding: 5px;color:white"}Terranova
+                %h5{:style => "padding: 5px;color:white"}"Terranova"
 
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
+
           %ul.nav.navbar-nav.navbar-right
             %li.page-scroll
               %a{:href => "#page-top"} Noticias
@@ -54,20 +61,17 @@
         .item.active
           .fill{:style => "background-image:url('#{image_url("rotativas/imagen1.jpg")}');width:100%; max-width:100%"}
           .carousel-caption
-            %h2 Imagen 1
+            %h5 Si desea vender, arrendar ó construir en una propiedad,favor acérquese a la administración e infórmese si se encuentra al día en el pago de alícuotas, ya que es requisito indispensable obtener el certificado de expensas expedido por la administración, el mismo que se le servirá para realizar cualquier trámite
         .item
           / Set the second background image using inline CSS below.
           .fill{:style => "background-image:url('#{image_url("rotativas/imagen2.jpg")}');width:100%; max-width:100%"}
           .carousel-caption
-            %h2 Imagen 2
         .item
           .fill{:style => "background-image:url('#{image_url("rotativas/imagen3.jpg")}');width:100%; max-width:100%"}
           .carousel-caption
-            %h2 Imagen 3
         .item
           .fill{:style => "background-image:url('#{image_url("rotativas/imagen4.jpg")}');width:100%; max-width:100%"}
           .carousel-caption
-            %h2 Imagen 4
       / Controls
       %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
         %span.icon-prev
@@ -85,7 +89,7 @@
             %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal1"}
               .caption
                 .caption-content
-                  %img.fa.fa-search-plus.fa-3x{:alt => "", src: image_url("noticias/cake.png")}
+                  %i.fa.fa-search-plus.fa-3x
               %img.img-responsive{:alt => "", src: image_url("noticias/cake.png")}
           .col-sm-4.portfolio-item
             %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal2"}
@@ -387,10 +391,10 @@
                   %i.fa.fa-times
                   Close
     / Plugin JavaScript
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"}
+    %script{:src=>"freelancer-min.js"}
     :javascript
-      $(document).ready( function() {
-        $('.carousel').carousel({
-            interval: 4000 //changes the speed
-        })
-      } );
+      $('.carousel').carousel({
+          interval: 2000 //changes the speed
+      })
 
