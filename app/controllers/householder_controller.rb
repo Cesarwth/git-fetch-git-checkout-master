@@ -1,7 +1,7 @@
 class HouseHolderController < ApplicationController
 
   def index
-    render 'landing/householder'
+    render 'landing/index'
   end
 
 
