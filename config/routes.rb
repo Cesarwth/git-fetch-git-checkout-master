@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   root 'dashboard#index'
   post 'send_mail', to: 'dashboard#send_mail'
   get 'householder', to: 'householder#index'
+
+
+  namespace :manager do
+    resources :categories, :householders, :contacts, :rotative_images
+  end
 end
