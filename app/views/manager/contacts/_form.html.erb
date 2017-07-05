@@ -1,0 +1,26 @@
+<%= form_with(model: contact, local: true, url: manager_contacts_path ) do |form| %>
+  <% if contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= label_tag(:label, "Dirección:") %>
+    <%= form.text_field :address %><br>
+
+    <%= label_tag(:label, "Teléfono:") %>
+    <%= form.text_field :phone %><br>
+
+    <%= label_tag(:label, "Mail:") %>
+    <%= form.text_field :email %><br>
+
+    <%= form.submit %>
+  </div>
+<% end %>
