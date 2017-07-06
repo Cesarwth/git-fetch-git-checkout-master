@@ -8,6 +8,6 @@ Rails.application.routes.draw do
 
 
   namespace :manager do
-    resources :categories, :householders, :contacts, :rotative_images
+    resources :categories, :users, :contacts, :rotative_images
   end
 end

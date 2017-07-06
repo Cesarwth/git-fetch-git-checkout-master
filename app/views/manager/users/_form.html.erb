@@ -11,7 +11,25 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="container" align="center">
+      <%= label_tag(:label, "Nombre:") %>
+      <%= form.text_field :first_name %>
+      <br/>
+      <%= label_tag(:label, "Apellido:") %>
+      <%= form.text_field :last_name %>
+      <br/>
+      <%= label_tag(:label, "Telefono:") %>
+      <%= form.text_field :phone %>
+      <br/>
+      <%= label_tag(:label, "Identificacion:") %>
+      <%= form.text_field :id_card %>
+      <br/>
+      <%= label_tag(:label, "Mail:") %>
+      <%= form.text_field :email %>
+      <br/>
+      <%= label_tag(:label, "Contraseña:") %>
+      <%= form.text_field :password %>
+      <br/>
+      <%= form.submit %>
+    </div>
 <% end %>
