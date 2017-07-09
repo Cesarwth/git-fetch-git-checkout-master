@@ -28,7 +28,7 @@
         <td><%= user.email %></td>
 
         <!--<td><%= link_to 'Show', manager_user_path(user) %></td> -->
-        <td><%= button_to 'Editar', edit_manager_user_path(user) %></td>
+        <td><%= button_to 'Editar', edit_manager_user_path(user), method: :get %></td>
         <td><%= button_to 'Eliminar', manager_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -37,7 +37,7 @@
 
 <br>
 <div align="center">
-  <%= button_to 'Nuevo', new_manager_user_path %>1
+  <%= button_to 'Nuevo', new_manager_user_path %>
 </div>
 
 
