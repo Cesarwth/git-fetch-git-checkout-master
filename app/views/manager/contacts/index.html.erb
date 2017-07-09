@@ -23,7 +23,7 @@
         <%#=Comentario para que no muestre boton de mostrar%>
         <%#=<td><%= link_to 'Show', manager_contacts_path(contact) %><%#=</td>%>
       
-        <%= link_to 'Editar', edit_manager_contact_path(contact) %><br>
+        <%= link_to 'Editar', edit_manager_contact_path(contact), method: :get %><br>
 
         <%#=Comentario para que no muestre boton de eliminar%>
         <%#=<td><%= link_to 'Destroy', manager_contacts_path(contact), method: :delete, data: { confirm: 'Are you sure?' } %><%#=</td>%>
