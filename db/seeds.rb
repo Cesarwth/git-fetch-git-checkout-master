@@ -9,4 +9,4 @@ role = Role.create!(name: 'admin', status: 1)
 User.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password', roles: [role])
 # Creates default unique contact record
 # ["id", "address", "phone", "email", "status", "created_at", "updated_at"]
-Contact.create(address: 'Test Address', phone: '1234567890', email: 'test@email.com')
+Contact.create(address: 'Sector Capelo Calle Cipreses. ref:Frente a la Urbanización Hacienda Capelo', phone: 'Administración: 022863322 ; Garita: 022867407', email: 'ciudadelaterranova@yahoo.com')
