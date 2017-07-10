@@ -19,11 +19,8 @@
     %link{:href=>"css/font-awesome.min.sass", :rel => "stylesheet"}/
 
 
-
-
   <!-- Fuentes de letras de Template -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
 
 
   %body#page-top.index
@@ -185,7 +182,8 @@
                     .address
                       %p
                         %i.glyphicon.glyphicon-map-marker
-                        Sector Capelo Calle Cipreses.  ref:Frente a la Urbanización Hacienda Capelo
+                        #{@contact.address}
+                        /Sector Capelo Calle Cipreses.  ref:Frente a la Urbanización Hacienda Capelo
                       %p
                         %i.glyphicon.glyphicon-earphone
                         Administración: 022863322

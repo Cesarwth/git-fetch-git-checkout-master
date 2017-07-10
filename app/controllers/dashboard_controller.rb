@@ -1,6 +1,7 @@
 class DashboardController < ApplicationController
 
   def index
+    @contact = Contact.first
     render 'landing/index'
   end
 
