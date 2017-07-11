@@ -28,7 +28,7 @@ class Manager::RotatingImagesController < ApplicationController
 
     respond_to do |format|
       if @rotating_image.save
-        format.html { redirect_to @rotating_image, notice: 'Rotating image was successfully created.' }
+        format.html { redirect_to manager_rotating_images_path, notice: 'Rotating image was successfully created.' }
         format.json { render :show, status: :created, location: @rotating_image }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Manager::RotatingImagesController < ApplicationController
   def update
     respond_to do |format|
       if @rotating_image.update(rotating_image_params)
-        format.html { redirect_to @rotating_image, notice: 'Rotating image was successfully updated.' }
+        format.html { redirect_to manager_rotating_images_path, notice: 'Rotating image was successfully updated.' }
         format.json { render :show, status: :ok, location: @rotating_image }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class Manager::RotatingImagesController < ApplicationController
   def destroy
     @rotating_image.destroy
     respond_to do |format|
-      format.html { redirect_to rotating_images_url, notice: 'Rotating image was successfully destroyed.' }
+      format.html { redirect_to manager_rotating_images_path, notice: 'Rotating image was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class Manager::RotatingImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rotating_image_params
-      params.fetch(:rotating_image, {})
+      params.require(:rotating_image).permit(:name, :position)
     end
 end

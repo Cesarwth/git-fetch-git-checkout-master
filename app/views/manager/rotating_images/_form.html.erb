@@ -1,4 +1,4 @@
-<%= form_with(model: rotating_image, local: true) do |form| %>
+<%= form_for([:manager, @rotating_image]) do |form| %>
   <% if rotating_image.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(rotating_image.errors.count, "error") %> prohibited this rotating_image from being saved:</h2>
@@ -11,7 +11,14 @@
     </div>
   <% end %>
 
-  <div class="actions">
+    <div class="container" align="center">
+      <%= label_tag(:label, "Nombre:") %>
+      <%= form.text_field :name %>
+      <br/>
+      <%= label_tag(:label, "Posicion:") %>
+      <%= form.text_field :position %>
+      <%= form.file_field :file_name %>
+      <br/>
     <%= form.submit %>
   </div>
 <% end %>

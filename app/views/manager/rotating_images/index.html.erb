@@ -1,20 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Rotating Images</h1>
+<div align="center" class="container">
+  <h1>Rotativas</h1>
+</div>
 
-<table>
+<table class="table table-bordered table-responsive">
   <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>NOMBRE</th>
+    <th>FOTO</th>
+    <th>POSICION</th>
+  </tr>
   </thead>
 
   <tbody>
     <% @rotating_images.each do |rotating_image| %>
-      <tr>
-        <td><%= link_to 'Show', rotating_image %></td>
-        <td><%= link_to 'Edit', edit_rotating_image_path(rotating_image) %></td>
-        <td><%= link_to 'Destroy', rotating_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <tr >
+        <td><%= rotating_image.name %></td>
+        <td><%= image_tag rotating_image.file_name, :size => "300x300" %></td>
+        <td><%= rotating_image.position %></td>
+
+
+
+        <td><%= button_to 'Editar', edit_manager_rotating_image_path(rotating_image), method: :get %></td>
+        <td><%= button_to 'Eliminar', manager_rotating_image_path(rotating_image), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Rotating Image', new_rotating_image_path %>
+<%= link_to 'New Rotating Image', new_manager_rotating_image_path %>
