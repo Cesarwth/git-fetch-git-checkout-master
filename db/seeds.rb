@@ -15,3 +15,8 @@ Category.create(title: 'Información Administrativa', description: 'Información
 Category.create(title: 'Información Financiera', description: 'Información Financiera texto', position: 2, image: 'informacion_financiera.png', status: 1)
 Category.create(title: 'Eventos Sociales', description: 'Eventos Sociales Texto', position: 3, image: 'eventos_sociales.png', status: 1)
 Category.create(title: 'Sede Social - BBQ - Canchas Deportivas', description: 'Sede Social - BBQ - Canchas Deportivas texto', position: 4, image: 'sede_social.png', status: 1)
+
+RotatingImage.create(name: 'Imagen1', file_name: '/assets/rotativas/imagen1.jpg',  position: 1 , status: 1)
+RotatingImage.create(name: 'Imagen2', file_name: '/assets/rotativas/imagen2.jpg',  position: 1 , status: 1)
+RotatingImage.create(name: 'Imagen3', file_name: '/assets/rotativas/imagen3.jpg',  position: 1 , status: 1)
+RotatingImage.create(name: 'Imagen4', file_name: '/assets/rotativas/imagen4.jpg',  position: 1 , status: 1)
