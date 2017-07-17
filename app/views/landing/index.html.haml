@@ -13,16 +13,6 @@
     %link{:href => "https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic", :rel => "stylesheet", :type => "text/css"}/
 
 
-    %link{:href=>"freelancer.min.sass", :rel => "stylesheet"}/
-    %link{:href=>"full-slider.sass", :rel => "stylesheet"}/
-    %link{:href=>"css/bootstrap.min.css", :rel => "stylesheet"}/
-    %link{:href=>"css/font-awesome.min.sass", :rel => "stylesheet"}/
-
-
-  <!-- Fuentes de letras de Template -->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
   %body#page-top.index
     / Menu de navegación
     %nav#mainNav.navbar.navbar-default.navbar-fixed-top.navbar-custom
@@ -392,13 +382,6 @@
                 %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
                   %i.fa.fa-times
                   Close
-    / Plugin JavaScript
-    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"}
-    %script{:src=>"https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-freelancer/3.3.7/js/freelancer.js"}
-    %script{:type => "text/javascript",:src=>"/javascripts/vendor/jquery/jquery.min.js"}
-    %script{:type => "text/javascript",:src=>"/javascripts/vendor/bootstrap/js/bootstrap.min.js"}
-
-
     :javascript
       $('.carousel').carousel({
           interval: 2000 //changes the speed

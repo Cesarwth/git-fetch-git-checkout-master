@@ -12,11 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require rails-ujs
 //= require turbolinks
 //= require bootstrap
 //= require bootstrap-sprockets
-//= require jqBootstrapValidation
 //= require contact_me
-//= require freelancer-min.js
+//= require jqBootstrapValidation
+//= require freelancer-min
 //= require_tree .
