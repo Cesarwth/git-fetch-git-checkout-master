@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     if resource.admin?
       admin_root_url
     else
-      user_root_url
+      manager_root_url
     end
   end
 

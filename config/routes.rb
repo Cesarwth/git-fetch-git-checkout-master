@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
 
   namespace :manager do
+    root 'dashboard#index'
     resources :categories, :users, :contacts, :rotating_images
   end
 end

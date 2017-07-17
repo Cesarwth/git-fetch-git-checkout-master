@@ -6,7 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 role = Role.create!(name: 'admin', status: 1)
+manager = Role.create!(name: 'manager', status: 1)
 User.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password', roles: [role])
+User.create!(email: 'manager@example.com', password: 'password', password_confirmation: 'password', roles: [manager])
 # Creates default unique contact record
 Contact.create(address: 'Sector Capelo Calle Cipreses. ref:Frente a la Urbanización Hacienda Capelo', phone: 'Administración: 022863322 ; Garita: 022867407', email: 'ciudadelaterranova@yahoo.com')
 # Creates default categories
