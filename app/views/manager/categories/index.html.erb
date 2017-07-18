@@ -22,7 +22,12 @@
         <td><%= category.title %></td>
         <td><%= category.description %></td>
         <td><%= category.position %></td>
-        <td><%= category.image %></td>
+        <td>
+          <% if category.image %>
+              <%= image_tag category.image.url(:thumb) %>
+          <% end %>
+        </td>
+
         <td><%= link_to 'Ver', manager_category_path(category) %></td>
         <td><%= link_to 'Editar', edit_manager_category_path(category) %></td>
         <td><%= link_to 'Eliminar', manager_category_path(category), method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
