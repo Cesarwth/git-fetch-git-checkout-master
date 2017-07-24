@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" xmlns="http://www.w3.org/1999/html"><%= notice %></p>
 
 <h1>Contáctenos</h1>
 
@@ -9,7 +9,7 @@
     </tr>
   </thead>
 
-  <body>
+  <br>
     <% @contacts.each do |contact| %>
 
       <%= label_tag(:label, "Dirección: ") %>
@@ -23,7 +23,8 @@
         <%#=Comentario para que no muestre boton de mostrar%>
         <%#=<td><%= link_to 'Show', manager_contacts_path(contact) %><%#=</td>%>
       
-        <%= link_to 'Editar', edit_manager_contact_path(contact), method: :get %><br>
+      <%= link_to 'Editar', edit_manager_contact_path(contact), method: :get %></br>
+      <%= link_to 'Inicio', manager_root_path %>
 
         <%#=Comentario para que no muestre boton de eliminar%>
         <%#=<td><%= link_to 'Destroy', manager_contacts_path(contact), method: :delete, data: { confirm: 'Are you sure?' } %><%#=</td>%>

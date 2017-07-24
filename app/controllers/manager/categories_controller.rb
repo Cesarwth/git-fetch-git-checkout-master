@@ -43,7 +43,7 @@ class Manager::CategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @category.update(category_params)
-        format.html { redirect_to manager_category_path(@category), notice: 'Category was successfully updated.' }
+        format.html { redirect_to manager_category_path(@category), notice: 'La categoría se actualizó de manera correcta' }
         format.json { render :show, status: :ok, location: @category }
       else
         format.html { render :edit }

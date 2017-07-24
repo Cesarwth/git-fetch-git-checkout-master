@@ -1,5 +1,6 @@
 class Manager::UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /users
   # GET /users.json
@@ -28,7 +29,7 @@ class Manager::UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to manager_users_paths, notice: 'User was successfully created.' }
+        format.html { redirect_to manager_users_paths, notice: 'El usuario se creó de manera correcta' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class Manager::UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to manager_users_path, notice: 'User was successfully updated.' }
+        format.html { redirect_to manager_users_path, notice: 'Usuario actualizado de manera correcta' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class Manager::UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to users_url, notice: 'Usuario se eliminó de manera correcta' }
       format.json { head :no_content }
     end
   end
@@ -70,6 +71,6 @@ class Manager::UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
   private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :phone, :id_card, :status, :email, :password)
+    params.require(:user).permit(:first_name, :last_name, :phone, :id_card, :email, :password)
   end
 end
