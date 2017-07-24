@@ -17,7 +17,11 @@
     <% @rotating_images.each do |rotating_image| %>
       <tr >
         <td><%= rotating_image.name %></td>
-        <td><%= image_tag rotating_image.file_name, :size => "300x300" %></td>
+        <td>
+          <% if rotating_image.rotating_file %>
+              <%= image_tag rotating_image.rotating_file.url(:medium) %>
+          <% end %>
+        </td>
         <td><%= rotating_image.position %></td>
 
 

@@ -1,5 +1,6 @@
 class Manager::RotatingImagesController < ApplicationController
   before_action :set_rotating_image, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /rotating_images
   # GET /rotating_images.json
@@ -69,6 +70,6 @@ class Manager::RotatingImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rotating_image_params
-      params.require(:rotating_image).permit(:name, :position)
+      params.require(:rotating_image).permit(:name, :position, :rotating_file)
     end
 end

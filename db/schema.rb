@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170718050800) do
+ActiveRecord::Schema.define(version: 20170722213556) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,6 +79,10 @@ ActiveRecord::Schema.define(version: 20170718050800) do
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "rotating_file_file_name"
+    t.string "rotating_file_content_type"
+    t.integer "rotating_file_file_size"
+    t.datetime "rotating_file_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
