@@ -3,6 +3,7 @@ class DashboardController < ApplicationController
   def index
     @contact = Contact.first
     @categories = Category.all
+    @rotating_images = RotatingImage.all
     render 'landing/index'
   end
 
