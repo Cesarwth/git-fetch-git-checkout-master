@@ -9,26 +9,39 @@
     </tr>
   </thead>
 
-  <br>
+  <div class="form-style-9">
     <% @contacts.each do |contact| %>
 
+
+        <ul>
+          <li>
       <%= label_tag(:label, "Dirección: ") %>
       <%= contact.address %><br>
+          </li>
 
+          <li>
       <%= label_tag(:label, "Teléfono:") %>
       <%= contact.phone%><br>
+          </li>
 
+          <li>
       <%= label_tag(:label, "Mail:") %>
       <%= contact.email %><br>
+          </li>
         <%#=Comentario para que no muestre boton de mostrar%>
         <%#=<td><%= link_to 'Show', manager_contacts_path(contact) %><%#=</td>%>
-      
-      <%= link_to 'Editar', edit_manager_contact_path(contact), method: :get %></br>
-      <%= link_to 'Inicio', manager_root_path %>
 
+          <li>
+      <%= link_to '<button type="button">Editar</button>'.html_safe, edit_manager_contact_path(contact), method: :get %> &nbsp;
+
+      <%= link_to '<button type="button">Inicio</button>'.html_safe, manager_root_path %>
+          </li>
+        </ul>
         <%#=Comentario para que no muestre boton de eliminar%>
         <%#=<td><%= link_to 'Destroy', manager_contacts_path(contact), method: :delete, data: { confirm: 'Are you sure?' } %><%#=</td>%>
+
     <% end %>
+  </div>
   </body>
 </table>
 

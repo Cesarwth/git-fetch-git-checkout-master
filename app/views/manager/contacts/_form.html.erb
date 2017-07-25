@@ -7,20 +7,32 @@
       <% contact.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
-countNoprohibited      </ul>
+      </ul>
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= label_tag(:label, "Dirección:") %>
-    <%= form.text_field :address %><br>
+  <div class="form-style-9">
 
+    <ul>
+      <li>
+    <%= label_tag(:label, "Dirección:") %>
+    <%= form.text_field :address %>
+    <br></li>
+
+      <li>
     <%= label_tag(:label, "Teléfono:") %>
     <%= form.text_field :phone %><br>
+      </li>
 
+      <li>
     <%= label_tag(:label, "Mail:") %>
     <%= form.text_field :email %><br>
+      </li>
 
-    <%= form.submit %>
+      <li>
+    <%= form.submit(:Actualizar) %>
+      </li>
+
+    </ul>
   </div>
 <% end %>
