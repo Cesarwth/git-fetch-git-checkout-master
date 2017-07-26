@@ -2,12 +2,12 @@
 
 <h1>Categorías</h1>
 
-<table>
+<table class="table table-bordered table-responsive form-style-9">
   <thead>
   <tr>
     <th colspan="3"></th>
   </tr>
-  <tr>
+  <tr class="form-style-9">
     <th>Título</th>
     <th>Descripción</th>
     <th>Posición</th>
@@ -15,7 +15,7 @@
   </tr>
   </thead>
 
-  <tbody>
+  <tbody class="form-style-9">
   <% @categories.each do |category| %>
 
       <tr>
@@ -30,7 +30,7 @@
 
         <td><%= link_to 'Ver', manager_category_path(category) %></td>
         <td><%= link_to 'Editar', edit_manager_category_path(category) %></td>
-        <td><%= link_to 'Eliminar', manager_category_path(category), method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+        <%#=<td><%= link_to 'Eliminar', manager_category_path(category), method: :delete, data: { confirm: '¿Estás seguro?' } %><%#=</td>%>
       </tr>
   <% end %>
   </tbody>
@@ -38,9 +38,9 @@
 
 <br>
 
-<%= link_to 'Nueva categoría', new_manager_category_path %>
+<%#=<%= link_to 'Nueva categoría', new_manager_category_path %>
 
 <br>
 <br>
 
-<%= link_to 'Inicio', manager_root_path %>
+<%= link_to '<button type="button">Inicio</button>'.html_safe, manager_root_path %>
