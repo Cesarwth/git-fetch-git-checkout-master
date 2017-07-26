@@ -23,17 +23,17 @@
             %span.sr-only Navegación
             Menu
             %i.fa.fa-bars
-          %a.navbar-brand{:href => "#page-top", :style => "padding: 5px"}
           %table
             %td
-              %img.img-responsive{:src => image_url("urbterranova.png"), :style => "vertical-align: middle; height: 100%;"}/
+              = link_to image_tag( 'urbterranova.png'), '#page-top', :style => "vertical-align: middle; height: 100%;" ,class: "img-responsive"
             %td
               .hidden-xs
-                %h5{:style => "padding: 5px;color:white"}
+                %h5{:style => "padding: 5px;color:white" }
                   Urbanización
             %td
               .hidden-xs
-                %h5{:style => "padding: 5px;color:white"}"Terranova"
+                %h5{:style => "padding: 5px;color:white" }
+                  "Terranova"
 
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
 
@@ -47,7 +47,7 @@
             %li.page-scroll
               %a{:href => "/users/sign_in"} Iniciar Sesión
 
-
+    /Sección imagenes rotativas
     %header#myCarousel.carousel.slide
       %ol.carousel-indicators
         %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
@@ -61,7 +61,8 @@
               %img.img-responsive{:alt => rotating.name, src: image_url(rotating.rotating_file.url(:original)) , :height => "100%", :width =>"100%"}
               .container
               .carousel-caption
-                %h5 Si desea vender, arrendar ó construir en una propiedad,favor acérquese a la administración e infórmese si se encuentra al día en el pago de alícuotas, ya que es requisito indispensable obtener el certificado de expensas expedido por la administración, el mismo que se le servirá para realizar cualquier trámite
+                %h5{:style => "text-align: justify"}
+                  Si desea vender, arrendar ó construir en una propiedad,favor acérquese a la administración e infórmese si se encuentra al día en el pago de alícuotas, ya que es requisito indispensable obtener el certificado de expensas expedido por la administración, el mismo que se le servirá para realizar cualquier trámite
           - else
             .item
               %img.img-responsive{:alt => rotating.name, src: image_url(rotating.rotating_file.url(:original)) , :height => "100%", :width =>"100%"}
@@ -133,6 +134,7 @@
                             %button.btn.btn-success.btn-lg{:type => "submit"} Enviar
                       / Fin Boton enviar
                     / fin de Formulario
+
                   / Inicio de Seccion de mapa
                   .col-md-6.col-sm-12.col-xs-12.address-space
                     #map-canvas.col-xs-12.wow.fadeIn.animated{"data-wow-delay" => "1000ms", "data-wow-duration" => "400ms", :style => "visibility: visible;-webkit-animation-duration: 400ms; -moz-animation-duration: 400ms; animation-duration: 400ms;-webkit-animation-delay: 1000ms; -moz-animation-delay: 1000ms; animation-delay: 1000ms;"}
@@ -149,6 +151,7 @@
                         #{@contact.email}
                   / Fin de Seccion de mapa
       / Fin de Seccion container
+
     / Pie de Pagina
     %footer.text-center
       .footer-below
@@ -160,6 +163,7 @@
     .scroll-top.page-scroll.hidden-sm.hidden-xs.hidden-lg.hidden-md
       %a.btn.btn-primary{:href => "#page-top"}
         %i.fa.fa-chevron-up
+
     / Categorías Modals (TO DO validar que se puede modificar)
     #portfolioModal1.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
       .modal-content
@@ -172,7 +176,6 @@
               .modal-body
                 %h2 Categoría 1
                 %hr.star-primary/
-                %img.img-responsive.img-centered{:alt => "", src: image_url("noticias/cake.png")}
                 %p Mostrar información de Cabina
                 %ul.list-inline.item-details
                   %li
@@ -201,7 +204,6 @@
               .modal-body
                 %h2 Project Title
                 %hr.star-primary/
-                %img.img-responsive.img-centered{:alt => "", :src => image_url("noticias/cake.png")}/
                 %p
                   Use this area of the page to describe your project. The icon above is part of a free icon set by
                   = succeed "." do
@@ -233,7 +235,6 @@
               .modal-body
                 %h2 Project Title
                 %hr.star-primary/
-                %img.img-responsive.img-centered{:alt => "", :src => image_url("noticias/circus.png")}/
                 %p
                   Use this area of the page to describe your project. The icon above is part of a free icon set by
                   = succeed "." do
@@ -265,7 +266,6 @@
               .modal-body
                 %h2 Project Title
                 %hr.star-primary/
-                %img.img-responsive.img-centered{:alt => "", :src => image_url("noticias/game.png")}/
                 %p
                   Use this area of the page to describe your project. The icon above is part of a free icon set by
                   = succeed "." do
@@ -297,7 +297,6 @@
               .modal-body
                 %h2 Project Title
                 %hr.star-primary/
-                %img.img-responsive.img-centered{:alt => "", :src => image_url("noticias/safe.png")}/
                 %p
                   Use this area of the page to describe your project. The icon above is part of a free icon set by
                   = succeed "." do
@@ -329,7 +328,6 @@
               .modal-body
                 %h2 Project Title
                 %hr.star-primary/
-                %img.img-responsive.img-centered{:alt => "", :src => image_url("noticias/submarine.png")}/
                 %p
                   Use this area of the page to describe your project. The icon above is part of a free icon set by
                   = succeed "." do
@@ -352,5 +350,5 @@
                   Close
     :javascript
       $('.carousel').carousel({
-          interval: 2000 //changes the speed
+          interval: 4000 //changes the speed
       })
