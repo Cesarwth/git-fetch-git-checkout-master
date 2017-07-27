@@ -61,11 +61,16 @@
               %img.img-responsive{:alt => rotating.name, src: image_url(rotating.rotating_file.url(:original)) , :height => "100%", :width =>"100%"}
               .container
               .carousel-caption
-                %h5{:style => "text-align: justify"}
-                  Si desea vender, arrendar ó construir en una propiedad,favor acérquese a la administración e infórmese si se encuentra al día en el pago de alícuotas, ya que es requisito indispensable obtener el certificado de expensas expedido por la administración, el mismo que se le servirá para realizar cualquier trámite
+                %h4{:style => "text-align: justify"}
+                  = rotating.name
           - else
             .item
               %img.img-responsive{:alt => rotating.name, src: image_url(rotating.rotating_file.url(:original)) , :height => "100%", :width =>"100%"}
+              .container
+              .carousel-caption
+                %h4{:style => "text-align: justify"}
+                  = rotating.name
+
       / Controls
       %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
         %span.icon-prev
