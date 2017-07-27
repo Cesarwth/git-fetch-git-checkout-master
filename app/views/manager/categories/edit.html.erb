@@ -2,5 +2,5 @@
 
 <%= render 'form', category: @category %>
 
-<%= link_to 'Show', manager_categories_path(@category) %> |
-<%= link_to 'Back', manager_categories_path %>
+<%#=<%= link_to 'Show', manager_categories_path(@category) %> |
+<%= link_to '<button type="button">Atrás</button>'.html_safe, :back %>
