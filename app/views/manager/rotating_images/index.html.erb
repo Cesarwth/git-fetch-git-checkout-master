@@ -3,7 +3,11 @@
 <div align="center" class="container">
   <h1>Rotativas</h1>
 </div>
-
+<br/>
+<div align="center">
+  <%#=<%= link_to 'Nueva Imagen', new_manager_rotating_image_path, class: 'btn9 normal', style: 'color: white; text-decoration: none'%>
+</div>
+<br/>
 <table class="table table-bordered table-responsive form-style-9">
   <thead>
   <tr class="form-style-9">
@@ -26,7 +30,10 @@
 
 
 
-        <td><%= button_to 'Editar', edit_manager_rotating_image_path(rotating_image), method: :get %></td>
+        <td><%#= button_to 'Editar', edit_manager_rotating_image_path(rotating_image), method: :get %>
+          <%= link_to 'Editar' ,edit_manager_rotating_image_path(rotating_image), class: 'btn9 normal', style: 'color: white; text-decoration: none',method: :get  %>
+          </td>
+
         <%#=<td><%= button_to 'Eliminar', manager_rotating_image_path(rotating_image), method: :delete, data: { confirm: 'Are you sure?' } %>
 
       </tr>
@@ -34,5 +41,6 @@
   </tbody>
 </table>
 <%#=<%= link_to '<button type="button">Inicio</button>'.html_safe, manager_root_path %>
+<br/>
 
-<%#=<%= link_to 'New Rotating Image', new_manager_rotating_image_path %>
+

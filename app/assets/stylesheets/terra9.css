@@ -1,0 +1,36 @@
+.btn9 {
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.editar {background-color: #4CAF50;padding: 7px 20px;} /* Green */
+.editar:hover {background-color: #46a049;padding: 12px 22px;}
+
+.info {background-color: #2196F3; color: white}
+.info:hover {background: #0b7dda;padding: 14px 22px;}
+
+.normal {background-color: #216288; color: white}
+.normal:hover{background-color: #185e87;padding: 14px 22px;}
+
+.salir {background-color: #ff9800;} /* Orange */
+.salir:hover {background: #e68a00;padding: 14px 22px;}
+
+.borrar {
+    background-color: #f44336;padding: 7px 20px;} /* Red */
+.borrar:hover {background: #da190b;
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+}
+
+/*.tab9{
+    border: none;
+    color: black;
+    background-color: #216288;
+    padding: 10px 22px;
+    font-size: 16px;
+    cursor: pointer;
+}*/

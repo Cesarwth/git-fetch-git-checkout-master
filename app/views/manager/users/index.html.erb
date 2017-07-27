@@ -28,8 +28,12 @@
         <td><%= user.email %></td>
 
         <!--<td><%= link_to 'Show', manager_user_path(user) %></td> -->
-        <td><%= button_to 'Editar', edit_manager_user_path(user), method: :get %></td>
-        <td><%= button_to 'Eliminar', manager_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= button_to 'Editar', edit_manager_user_path(user), method: :get %>
+          <%= link_to 'Editar' ,edit_manager_user_path(user), class: 'btn9 normal', style: 'color: white; text-decoration: none',method: :get  %>
+        </td>
+        <td><%#= button_to 'Eliminar', manager_user_path(user), method: :delete, data: { confirm: 'Está segguro de eliminar la cuenta?' } %>
+          <%= link_to 'Eliminar' ,manager_user_path(user), class: 'btn9 borrar', style: 'color: white; text-decoration: none',method: :delete, data: { confirm: 'Está segguro de eliminar la cuenta?'}  %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -37,7 +41,8 @@
 
 <br>
 <div align="center">
-  <%= button_to 'Nuevo', new_manager_user_path %>
+  <%#= button_to 'Nuevo', new_manager_user_path %>
+  <%= link_to 'Nuevo' ,new_manager_user_path, class: 'btn9 editar', style: 'color: white; text-decoration: none' %>
 </div>
 
 <br>

@@ -32,7 +32,9 @@
         <%#=<td><%= link_to 'Show', manager_contacts_path(contact) %><%#=</td>%>
 
           <li>
-      <%= link_to '<button type="button">Editar</button>'.html_safe, edit_manager_contact_path(contact), method: :get %> &nbsp;
+            <td align="center"><%#= button_to 'Editar', edit_manager_contact_path(contact), method: :get ,class: 'btn9 info9'%>
+              <%= link_to 'Editar' ,edit_manager_contact_path(contact), class: 'btn9 normal', style: 'color: white; text-decoration: none' %>
+            </td>
 
             <%#=<%= link_to '<button type="button">Inicio</button>'.html_safe, manager_root_path %>
           </li>
@@ -46,6 +48,8 @@
 </table>
 
 <br>
+
+
 
 <%#=Comentario para que no muestre boton de nuevo%>
 <%#=<%= link_to 'New Contact', new_manager_contact_path %>
