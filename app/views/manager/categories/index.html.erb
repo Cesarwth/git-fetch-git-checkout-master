@@ -18,7 +18,7 @@
   <tbody class="form-style-9">
   <% @categories.each do |category| %>
 
-      <tr>
+      <td>
         <td><%= category.title %></td>
         <td><%= category.description %></td>
         <td><%= category.position %></td>
@@ -28,7 +28,9 @@
           <% end %>
         </td>
 
-        <%#=<td><%= link_to 'Ver', manager_category_path(category) %><%#=</td>%>
+        <td>
+        <%= link_to 'Ver', manager_category_path(category), class: 'btn9 editar', style: 'color: white; text-decoration: none' %></td>
+        </td>
         <td><%#= button_to 'Editar', edit_manager_category_path(category) %>
           <%= link_to 'Editar' ,edit_manager_category_path(category), class: 'btn9 normal', style: 'color: white; text-decoration: none',method: :get  %>
         </td>
