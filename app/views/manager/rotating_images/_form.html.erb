@@ -12,11 +12,16 @@
   <% end %>
 
     <div class="container" align="center">
+      <%= label_tag(:label, "Posición:") %>
+      <%= form.text_field :position %>
+      <br/>
       <%= label_tag(:label, "Descripción:") %>
       <%= form.text_field :name %>
       <br/>
       <%= form.file_field :rotating_file %>
-      <br/>
+      <br/><br/><br/>
+      <%= image_tag rotating_image.rotating_file.url(:medium) %>
+      <br/><br/><br/>
       <%= form.submit(:Actualizar) %>
   </div>
 <% end %>

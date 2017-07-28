@@ -11,9 +11,12 @@
         </div>
     <% end %>
 
-    <div class="actions">
+    <div class="actions" align="center">
       <%= label_tag(:label, "Titulo:") %>
       <%= form.text_field :title %>
+      <br/><br/><br/>
+      <%= image_tag category.image.url(:thumb) %>
+      <br/><br/><br/>
       <%= form.file_field :avatar %>
 
       <%= form.submit(:Actualizar) %>
