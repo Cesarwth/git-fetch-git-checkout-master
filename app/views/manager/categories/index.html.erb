@@ -18,7 +18,6 @@
   <tbody class="form-style-9">
   <% @categories.each do |category| %>
 
-      <td>
         <td><%= category.title %></td>
         <td><%= category.description %></td>
         <td><%= category.position %></td>
@@ -27,7 +26,6 @@
               <%= image_tag category.image.url(:thumb) %>
           <% end %>
         </td>
-
         <td>
         <%= link_to 'Ver', manager_category_path(category), class: 'btn9 editar', style: 'color: white; text-decoration: none' %></td>
         </td>
