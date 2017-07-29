@@ -27,10 +27,10 @@
           <% end %>
         </td>
         <td>
-        <%= link_to 'Ver', manager_category_path(category), class: 'btn9 editar', style: 'color: white; text-decoration: none' %></td>
+        <%= link_to 'Ver', manager_category_path(category), class: 'btn9 normal', style: 'color: white; text-decoration: none' %></td>
         </td>
         <td><%#= button_to 'Editar', edit_manager_category_path(category) %>
-          <%= link_to 'Editar' ,edit_manager_category_path(category), class: 'btn9 normal', style: 'color: white; text-decoration: none',method: :get  %>
+          <%= link_to 'Editar' ,edit_manager_category_path(category), class: 'btn9 editar', style: 'color: white; text-decoration: none',method: :get  %>
         </td>
         <%#=<td><%= link_to 'Eliminar', manager_category_path(category), method: :delete, data: { confirm: '¿Estás seguro?' } %><%#=</td>%>
       </tr>
