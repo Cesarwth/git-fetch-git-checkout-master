@@ -1,3 +1,31 @@
 <p id="notice"><%= notice %></p>
 
+
+<div class="form-style-9">
+
+  <ul>
+    <li>
+
+      <%= label_tag(:label, "Título:") %>
+      <%= @category.title %>
+      <br></li>
+
+      <li>
+      <%= label_tag(:label, "Descripción:") %>
+      <%= @category.description %>
+        <br></li>
+
+      <li>
+        <%= label_tag(:label, "Posición:") %>
+       <%= @category.position %>
+      <br></li>
+
+
+    <li>
+      <%= label_tag(:label, "Imagen:") %>
+      <% if @category.image %>
+          <%= image_tag @category.image.url(:thumb) %>
+      <% end %>
+    </li>
+
 <%= link_to '<button type="button">Atrás</button>'.html_safe, :back %>
