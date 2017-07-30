@@ -41,7 +41,7 @@
             %li.page-scroll
               %a{:href => "#page-top"} Informativo
             %li.page-scroll
-              %a{:href => "#portfolio"} Categorías
+              %a{:href => "#categories"} Categorías
             %li.page-scroll
               %a{:href => "#contact"} Contáctenos
             %li.page-scroll
@@ -79,16 +79,16 @@
 
 
     / Sección Categorías
-    %section#portfolio
+    %section#categories
       .container
         .row
           .col-lg-12.text-center
             %h2 Categorías
             %hr.star-primary/
         .row
-        - @categories.each do |category|
-          .col-sm-4.portfolio-item
-            %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal1"}
+        - @categories.each_with_index do |category, index|
+          .col-sm-4.category-item
+            %a.category-link{'data-toggle': 'modal', 'data-target': "##{dom_id(category)}"}
               .caption
                 .caption-content
                   %i.fa.fa-search-plus.fa-3x
@@ -170,7 +170,8 @@
         %i.fa.fa-chevron-up
 
     / Categorías Modals (TO DO validar que se puede modificar)
-    #portfolioModal1.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+  - @categories.each_with_index do |category, index|
+    .category-modal.modal.fade{id: dom_id(category), "aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
       .modal-content
         .close-modal{"data-dismiss" => "modal"}
           .lr
@@ -179,181 +180,14 @@
           .row
             .col-lg-8.col-lg-offset-2
               .modal-body
-                %h2 Categoría 1
+                %h2
+                  #{category.title}
                 %hr.star-primary/
-                %p Mostrar información de Cabina
-                %ul.list-inline.item-details
-                  %li
-                    Client:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Start Bootstrap
-                  %li
-                    Date:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} April 2017
-                  %li
-                    Service:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Web Development
+                %p #{category.description}
                 %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
                   %i.fa.fa-times
-                  Close
-    #portfolioModal2.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
-      .modal-content
-        .close-modal{"data-dismiss" => "modal"}
-          .lr
-            .rl
-        .container
-          .row
-            .col-lg-8.col-lg-offset-2
-              .modal-body
-                %h2 Project Title
-                %hr.star-primary/
-                %p
-                  Use this area of the page to describe your project. The icon above is part of a free icon set by
-                  = succeed "." do
-                    %a{:href => "https://sellfy.com/p/8Q9P/jV3VZ/"} Flat Icons
-                %ul.list-inline.item-details
-                  %li
-                    Client:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Start Bootstrap
-                  %li
-                    Date:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} April 2014
-                  %li
-                    Service:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Web Development
-                %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
-                  %i.fa.fa-times
-                  Close
-    #portfolioModal3.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
-      .modal-content
-        .close-modal{"data-dismiss" => "modal"}
-          .lr
-            .rl
-        .container
-          .row
-            .col-lg-8.col-lg-offset-2
-              .modal-body
-                %h2 Project Title
-                %hr.star-primary/
-                %p
-                  Use this area of the page to describe your project. The icon above is part of a free icon set by
-                  = succeed "." do
-                    %a{:href => "https://sellfy.com/p/8Q9P/jV3VZ/"} Flat Icons
-                %ul.list-inline.item-details
-                  %li
-                    Client:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Start Bootstrap
-                  %li
-                    Date:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} April 2014
-                  %li
-                    Service:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Web Development
-                %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
-                  %i.fa.fa-times
-                  Close
-    #portfolioModal4.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
-      .modal-content
-        .close-modal{"data-dismiss" => "modal"}
-          .lr
-            .rl
-        .container
-          .row
-            .col-lg-8.col-lg-offset-2
-              .modal-body
-                %h2 Project Title
-                %hr.star-primary/
-                %p
-                  Use this area of the page to describe your project. The icon above is part of a free icon set by
-                  = succeed "." do
-                    %a{:href => "https://sellfy.com/p/8Q9P/jV3VZ/"} Flat Icons
-                %ul.list-inline.item-details
-                  %li
-                    Client:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Start Bootstrap
-                  %li
-                    Date:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} April 2014
-                  %li
-                    Service:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Web Development
-                %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
-                  %i.fa.fa-times
-                  Close
-    #portfolioModal5.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
-      .modal-content
-        .close-modal{"data-dismiss" => "modal"}
-          .lr
-            .rl
-        .container
-          .row
-            .col-lg-8.col-lg-offset-2
-              .modal-body
-                %h2 Project Title
-                %hr.star-primary/
-                %p
-                  Use this area of the page to describe your project. The icon above is part of a free icon set by
-                  = succeed "." do
-                    %a{:href => "https://sellfy.com/p/8Q9P/jV3VZ/"} Flat Icons
-                %ul.list-inline.item-details
-                  %li
-                    Client:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Start Bootstrap
-                  %li
-                    Date:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} April 2014
-                  %li
-                    Service:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Web Development
-                %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
-                  %i.fa.fa-times
-                  Close
-    #portfolioModal6.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
-      .modal-content
-        .close-modal{"data-dismiss" => "modal"}
-          .lr
-            .rl
-        .container
-          .row
-            .col-lg-8.col-lg-offset-2
-              .modal-body
-                %h2 Project Title
-                %hr.star-primary/
-                %p
-                  Use this area of the page to describe your project. The icon above is part of a free icon set by
-                  = succeed "." do
-                    %a{:href => "https://sellfy.com/p/8Q9P/jV3VZ/"} Flat Icons
-                %ul.list-inline.item-details
-                  %li
-                    Client:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Start Bootstrap
-                  %li
-                    Date:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} April 2014
-                  %li
-                    Service:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Web Development
-                %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
-                  %i.fa.fa-times
-                  Close
+                  Cerrar
     :javascript
       $('.carousel').carousel({
-          interval: 4000 //changes the speed
+        interval: 4000 //changes the speed
       })
