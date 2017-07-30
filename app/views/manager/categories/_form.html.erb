@@ -12,12 +12,38 @@
     <% end %>
 
     <div class="actions" align="center">
+      <%= label_tag(:label, "Posición:") %>
+      <%= form.text_field :position %>
+      <br/>
       <%= label_tag(:label, "Titulo:") %>
       <%= form.text_field :title %>
+      <br/>
+      <%= label_tag(:label, "Descripción:") %>
+      <%= form.text_area :description %>
       <br/><br/><br/>
       <%= image_tag category.image.url(:thumb) %>
       <br/><br/><br/>
+      <%= label_tag(:label, "Seleccione Imagen") %>
       <%= form.file_field :avatar %>
+      <br/><br/>
+
+
+      <%#=TO DO Editar para que se carguen los archivos y se escondan si no hay un check%>
+      <%= form.check_box(:status)%>
+      <%= label_tag(:label, "Documentos") %>
+      <br/><br/>
+      <%= label_tag(:label, "Seleccione Archivo 1") %>
+      <%= form.file_field :avatar %>
+      <br/><br/>
+      <%= label_tag(:label, "Seleccione Archivo 2") %>
+      <%= form.file_field :avatar %>
+      <br/><br/>
+      <%= label_tag(:label, "Seleccione Archivo 3") %>
+      <%= form.file_field :avatar %>
+
+
+      <br/>
+
 
       <%= form.submit(:Actualizar) %>
     </div>
