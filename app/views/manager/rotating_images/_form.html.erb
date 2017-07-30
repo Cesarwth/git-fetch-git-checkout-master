@@ -22,6 +22,9 @@
       <br/><br/><br/>
       <%= image_tag rotating_image.rotating_file.url(:medium) %>
       <br/><br/><br/>
-      <%= form.submit(:Actualizar) %>
+      <div align="center">
+        <%= form.submit 'Actualizar' , :class => 'btn9 editar', :style => 'color: white; text-decoration: none' %>
+        <br/><br/>
+      </div>
   </div>
 <% end %>

@@ -30,6 +30,8 @@
       <%= label_tag(:label, "Contraseña:") %>
       <%= form.text_field :password %>
       <br/>
-      <%= form.submit(:Actualizar) %>
+      <div align="center">
+        <%= form.submit 'Actualizar' , :class => 'btn9 editar', :style => 'color: white; text-decoration: none' %>
+      </div>
     </div>
 <% end %>
