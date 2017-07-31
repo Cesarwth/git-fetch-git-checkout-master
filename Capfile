@@ -5,6 +5,7 @@ require 'capistrano/deploy'
 require 'capistrano/rails'
 require 'capistrano/bundler'
 require 'capistrano/rvm'
+require 'capistrano/linked_files'
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
 
