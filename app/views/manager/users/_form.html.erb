@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-    <div class="container" align="center">
+    <div align="center" class="container; form-style-9">
       <%= label_tag(:label, "Nombre:") %>
       <%= form.text_field :first_name %>
       <br/>
@@ -28,10 +28,11 @@
       <%= form.text_field :email %>
       <br/>
       <%= label_tag(:label, "Contraseña:") %>
-      <%= form.text_field :password %>
+      <%= form.password_field :password %>
       <br/>
       <div align="center">
         <%= form.submit 'Actualizar' , :class => 'btn9 editar', :style => 'color: white; text-decoration: none' %>
+        <br/><br/>
       </div>
     </div>
 <% end %>

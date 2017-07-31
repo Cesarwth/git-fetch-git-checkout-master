@@ -2,7 +2,11 @@
   <h1>Nuevo Usuario</h1>
 </div>
 
-
 <%= render 'form', user: @user %>
 
-<%= link_to 'Back', manager_users_path %>
+<%#=<%= link_to 'Back', manager_users_path %>
+
+<div align="center">
+  <%= link_to 'Atrás' , :back, class: 'btn9 editar', style: 'color: white; text-decoration: none'%>
+  <br/><br/>
+</div>
