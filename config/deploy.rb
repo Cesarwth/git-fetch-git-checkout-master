@@ -1,7 +1,7 @@
 # Change these
 server '165.227.70.24', roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'git@example.com:miguetv17/terranova.git'
+set :repo_url,        'git@github.com:miguetv17/terranova.git'
 set :application,     'terranova'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
