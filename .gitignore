@@ -65,3 +65,5 @@ bower.json
 .idea/
 
 database.yml
+/public/packs
+/node_modules
