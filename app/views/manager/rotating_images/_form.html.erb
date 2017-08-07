@@ -5,22 +5,19 @@
 
       <ul>
       <% rotating_image.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li class="alert alert-danger"><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
     <div align="center" class="container; form-style-9">
-      <%= label_tag(:label, "Posición:") %>
-      <%= form.text_field :position %>
-      <br/>
       <%= label_tag(:label, "Descripción:") %>
       <%= form.text_field :name %>
       <br/>
-      <%= form.file_field :rotating_file %>
-      <br/><br/><br/>
       <%= image_tag rotating_image.rotating_file.url(:medium) %>
+      <br/>
+      <%= form.file_field :rotating_file %>
       <br/><br/><br/>
       <div align="center">
         <%= form.submit 'Actualizar' , :class => 'btn9 editar', :style => 'color: white; text-decoration: none' %>

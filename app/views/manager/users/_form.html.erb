@@ -5,7 +5,7 @@
 
       <ul>
       <% user.errors.full_messages.each do |message| %>
-        <li class="errors"><%= message %></li>
+        <li class="alert alert-danger"><%= message %></li>
       <% end %>
       </ul>
     </div>

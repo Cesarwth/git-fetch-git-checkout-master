@@ -5,7 +5,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>jQuery UI Tabs - Default functionality</title>
-  <h1>Panel de control</h1>
+  <h1>Sistema de contenidos y administración "Urbanización Terranova"</h1>
   <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script>
@@ -15,8 +15,14 @@
       } );
 
   </script>
+
 </head>
 <body>
+<div align="right">
+  <%= link_to 'Cerrar Sesión' ,destroy_user_session_path, class: 'btn9 salir', style: 'color: white; text-decoration: none',method: :delete  %>
+  <%#= button_to 'Salir',destroy_user_session_path, method: :delete , class: 'btn9 borrar'%>
+</div>
+<br/>
 <div id="tabs">
   <ul>
     <li>
@@ -35,12 +41,10 @@
   </ul>
 
 </div>
+
 </body>
 <br/>
-<div align="center">
-  <%= link_to 'Salir' ,destroy_user_session_path, class: 'btn9 salir', style: 'color: white; text-decoration: none',method: :delete  %>
-  <%#= button_to 'Salir',destroy_user_session_path, method: :delete , class: 'btn9 borrar'%>
-</div>
+
 <br/>
 
 

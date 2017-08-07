@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-
+  protect_from_forgery
   def index
     @contact = Contact.first
     @categories = Category.all

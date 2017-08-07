@@ -11,8 +11,8 @@
 <table class="table table-bordered table-responsive form-style-9">
   <thead>
   <tr class="form-style-9">
-    <th>Descripción</th>
     <th>Imagen</th>
+    <th>Descripción</th>
     <th>Posición</th>
     <th>Opciones</th>
   </tr>
@@ -21,12 +21,12 @@
   <tbody class="form-style-9">
     <% @rotating_images.each do |rotating_image| %>
       <tr >
-        <td><%= rotating_image.name %></td>
         <td>
           <% if rotating_image.rotating_file %>
               <%= image_tag rotating_image.rotating_file.url(:medium) %>
           <% end %>
         </td>
+        <td><%= rotating_image.name %></td>
         <td><%= rotating_image.position %></td>
 
 

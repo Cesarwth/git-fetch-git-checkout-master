@@ -6,6 +6,7 @@ class Manager::RotatingImagesController < ApplicationController
   # GET /rotating_images.json
   def index
     @rotating_images = RotatingImage.all
+    @rotating_images = RotatingImage.order(:position)
   end
 
   # GET /rotating_images/1

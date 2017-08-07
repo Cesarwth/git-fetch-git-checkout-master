@@ -1,11 +1,11 @@
 class Manager::CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-
   # GET /categories
   # GET /categories.json
   def index
     @categories = Category.all
+    @categories = Category.order(:position)
   end
 
   # GET /categories/1
@@ -72,4 +72,5 @@ class Manager::CategoriesController < ApplicationController
   def category_params
     params.require(:category).permit(:title, :avatar)
   end
+
 end

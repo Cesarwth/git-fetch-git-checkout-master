@@ -55,7 +55,7 @@
         %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
         %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
       .carousel-inner
-        - @rotating_images.each_with_index do |rotating, index|
+        - @rotating_images.order("position").each_with_index do |rotating, index|
           - if index.zero?
             .item.active
               %img.img-responsive{:alt => rotating.name, src: image_url(rotating.rotating_file.url(:original)) , :height => "100%", :width =>"100%"}
@@ -86,7 +86,7 @@
             %h2 Categorías
             %hr.star-primary/
         .row
-        - @categories.each_with_index do |category, index|
+        - @categories.order("position").each_with_index do |category, index|
           .col-sm-4.category-item
             %a.category-link{'data-toggle': 'modal', 'data-target': "##{dom_id(category)}"}
               .caption
