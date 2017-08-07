@@ -45,7 +45,7 @@ class Manager::RotatingImagesController < ApplicationController
     respond_to do |format|
       if @rotating_image.update(rotating_image_params)
         flash[:success] = "ACTUALIZADO"
-        format.html { redirect_to manager_rotating_images_path, notice: 'La sección de noticias se actualizó de manera correcta' }
+        format.html { redirect_to manager_rotating_image_path(@rotating_image), notice: 'La sección de noticias se actualizó de manera correcta' }
         format.json { render :show, status: :ok, location: @rotating_image }
       else
         format.html { render :edit }

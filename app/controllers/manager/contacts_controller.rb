@@ -43,7 +43,7 @@ class Manager::ContactsController < ApplicationController
   def update
     respond_to do |format|
       if @contact.update(contact_params)
-        format.html { redirect_to manager_contacts_path, notice: 'La sección de contáctenos se actualizó de manera correcta.' }
+        format.html { redirect_to manager_contact_path(@contact), notice: 'La sección de contáctenos se actualizó de manera correcta.' }
         format.json { render :show, status: :ok, location: @contact }
       else
         format.html { render :edit }

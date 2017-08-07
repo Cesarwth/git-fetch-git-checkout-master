@@ -1,4 +1,33 @@
 <p id="notice"><%= notice %></p>
+<div align="center" class="container infoGrape" style="width: 100%">
+  <h1>Imágenes Rotativas</h1>
+</div>
 
-<%= link_to 'Edit', edit_rotating_image_path(@rotating_image) %> |
-<%= link_to 'Back', manager_rotating_images_path %>
+<div class="form-style-9">
+
+  <ul>
+    <li>
+      <%= label_tag(:label, "Posición:") %>
+      <%= @rotating_image.position %>
+      <br></li>
+
+    <li>
+
+      <%= label_tag(:label, "Título:") %>
+      <%= @rotating_image.name %>
+      <br></li>
+
+
+    <li>
+      <%= label_tag(:label, "Imagen:") %>
+      <% if @rotating_image.rotating_file %>
+          <%= image_tag @rotating_image.rotating_file.url(:thumb) %>
+      <% end %>
+    </li>
+  </ul>
+</div>
+
+<div align="center">
+  <%= link_to 'Panel de Control' , :back, class: 'btn9 normal', style: 'color: white; text-decoration: none'%>
+</div>
+

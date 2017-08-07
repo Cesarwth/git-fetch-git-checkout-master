@@ -1,4 +1,28 @@
 <p id="notice"><%= notice %></p>
+<div align="center" class="container infoOrange" style="width: 100%">
+  <h1>Contáctenos</h1>
+</div>
+<div class="form-style-9">
 
-<%= link_to 'Edit', edit_manager_contact_path(@contact) %> |
-<%= link_to 'Back', manager_contacts_path %>
+  <ul>
+    <li>
+      <%= label_tag(:label, "Dirección:") %>
+      <%= @contact.address %>
+      <br></li>
+
+    <li>
+      <%= label_tag(:label, "Teléfono:") %>
+      <%= @contact.phone %><br>
+    </li>
+
+    <li>
+      <%= label_tag(:label, "Mail:") %>
+      <%= @contact.email%><br>
+    </li>
+
+  </ul>
+</div>
+
+<div align="center">
+  <%= link_to 'Panel de Control' , :back, class: 'btn9 normal', style: 'color: white; text-decoration: none'%>
+</div>

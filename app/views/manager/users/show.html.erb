@@ -1,4 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_manager_user_path(@user) %> |
-<%= link_to 'Back', manager_user_path %>
+<div align="center" class="container infoGreen" style="width: 100%">
+  <h1>Usuarios</h1>
+</div>
+
+<div align="center" class="container; form-style-9">
+  <%= label_tag(:label, "Nombre:") %>
+  <%= @user.first_name %>
+  <br/>
+  <%= label_tag(:label, "Apellido:") %>
+  <%= @user.last_name %>
+  <br/>
+  <%= label_tag(:label, "Teléfono:") %>
+  <%= @user.phone %>
+  <br/>
+  <%= label_tag(:label, "Cédula de identidad:") %>
+  <%= @user.id_card %>
+  <br/>
+  <%= label_tag(:label, "Correo electrónico:") %>
+  <%= @user.email %>
+  <br/>
+  <%= label_tag(:label, "Contraseña:") %>
+  <%= @user.encrypted_password %>
+  <br/>
+</div>
+
+<div align="center">
+  <%= link_to 'Panel de Control' , :back, class: 'btn9 normal', style: 'color: white; text-decoration: none'%>
+</div>

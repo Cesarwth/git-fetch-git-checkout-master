@@ -29,7 +29,7 @@ class Manager::UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html {redirect_to manager_users_paths, notice: 'El usuario se creó de manera correcta'}
+        format.html {redirect_to manager_user_path(@user), notice: 'El usuario se creó de manera correcta'}
         format.json {render :show, status: :created, location: @user}
       else
         format.html {render :new}
@@ -43,7 +43,7 @@ class Manager::UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html {redirect_to manager_users_path, notice: 'Usuario actualizado de manera correcta'}
+        format.html {redirect_to manager_user_path(@user), notice: 'Usuario actualizado de manera correcta'}
         format.json {render :show, status: :ok, location: @user}
       else
         format.html {render :edit}
@@ -57,7 +57,7 @@ class Manager::UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html {redirect_to users_url, notice: 'Usuario se eliminó de manera correcta'}
+      format.html {redirect_to manager_users_path, notice: 'Usuario se eliminó de manera correcta'}
       format.json {head :no_content}
     end
   end
