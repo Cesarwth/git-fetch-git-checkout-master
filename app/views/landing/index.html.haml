@@ -23,7 +23,7 @@
             %span.sr-only Navegación
             Menu
             %i.fa.fa-bars
-          %table
+          %table{:style => "height: 50%;width: 50%; margin:5px 0px 0px 5px;"}
             %td
               = link_to image_tag( 'urbterranova.png'), '#page-top', :style => "vertical-align: middle; height: 100%;" ,class: "img-responsive"
             %td
@@ -48,6 +48,7 @@
               %a{:href => "/users/sign_in"} Iniciar Sesión
 
     /Sección imagenes rotativas
+    %section
     %header#myCarousel.carousel.slide
       %ol.carousel-indicators
         %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
