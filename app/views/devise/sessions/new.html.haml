@@ -47,11 +47,11 @@
               .form-group.letras
                 = f.label :email, 'Correo electrónico'
                 %br/
-                = f.email_field :email, autofocus: true, placeholder: "Ingrese correo electrónico", class: 'form-control'
+                = f.email_field :email, autofocus: true, placeholder: "Ingrese correo electrónico", class: 'form-control', required: true
               .form-group.letras
                 = f.label :password, 'Contraseña'
                 %br/
-                = f.password_field :password, autocomplete: "off", class: 'form-control'
+                = f.password_field :password, autocomplete: "off", class: 'form-control', required: true
 
               %br/
               - if devise_mapping.rememberable?
