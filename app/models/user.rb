@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   validates_confirmation_of :password
   validates_confirmation_of :password, :message => "Necesita confirmar la contraseña"
-  validates_presence_of :password_confirmation, if: -> { password.present? }
+  #validates_presence_of :password_confirmation, if: -> { password.present? }
 
   #validates :first_name, :presence => {:message => "Usted debe ingresar el nombre"}, :length => {:minimum => 4, :maximum => 20, :message => "Ingrese entre 4 y 20 caracteres"}
   #validates :last_name, :presence => {:message => "Usted debe ingresar el apellido"}, :length => {:minimum => 4, :maximum => 20, :message => "Ingrese entre 4 y 20 caracteres"}

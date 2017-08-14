@@ -1,9 +1,7 @@
-<p id="notice"><%= notice %></p>
-
 <div align="center" class="container infoGreen" style="width: 100%">
   <h1>Usuarios</h1>
 </div>
-
+<p id="notice"><%= notice %></p>
 
 <table class="table table-bordered table-responsive form-style-9">
   <thead class="form-style-9">
@@ -43,8 +41,10 @@
 <br>
 <div align="center">
   <%#= button_to 'Nuevo', new_manager_user_path %>
-  <%= link_to 'Nuevo' ,new_manager_user_path, class: 'btn9 normal', style: 'color: white; text-decoration: none' %>
+  <%= link_to 'Nuevo' ,new_manager_user_path, class: 'btn9 info', style: 'color: white; text-decoration: none' %>
+  <%= link_to 'Panel de Control' ,manager_root_url, class: 'btn9 normal', style: 'color: white; text-decoration: none' %>
 </div>
+
 
 <br>
 <br>
