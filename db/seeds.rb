@@ -19,6 +19,6 @@ Category.create(title: 'Eventos Sociales', description: 'Eventos Sociales Texto'
 Category.create(title: 'Sede Social - BBQ - Canchas Deportivas', description: 'Sede Social - BBQ - Canchas Deportivas texto', position: 5, image: File.new("#{Rails.root}/app/assets/images/default_categories/sede_social.jpg"), status: 1)
 
 RotatingImage.create(name: 'Imagen1', file_name: '/assets/rotativas/imagen1.jpg',  position: 1 , status: 1,rotating_file: File.new("#{Rails.root}/app/assets/images/rotativas/imagen1.jpg"))
-RotatingImage.create(name: 'Imagen2', file_name: '/assets/rotativas/imagen2.jpg',  position: 2 , status: 1,rotating_file: File.new("#{Rails.root}/app/assets/images/rotativas/imagen2rails.jpg"))
+RotatingImage.create(name: 'Imagen2', file_name: '/assets/rotativas/imagen2.jpg',  position: 2 , status: 1,rotating_file: File.new("#{Rails.root}/app/assets/images/rotativas/imagen2.jpg"))
 RotatingImage.create(name: 'Imagen3', file_name: '/assets/rotativas/imagen3.jpg',  position: 3 , status: 1,rotating_file: File.new("#{Rails.root}/app/assets/images/rotativas/imagen3.jpg"))
 RotatingImage.create(name: 'Imagen4', file_name: '/assets/rotativas/imagen4.jpg',  position: 4 , status: 1,rotating_file: File.new("#{Rails.root}/app/assets/images/rotativas/imagen4.jpg"))
