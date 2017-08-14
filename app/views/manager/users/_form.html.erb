@@ -1,38 +1,117 @@
 <%= form_for([:manager, @user]) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2 class="error"><%= pluralize(user.errors.count, "error") %> No se pudo guardar:</h2>
+    <% if user.errors.any? %>
+        <div id="error_explanation">
+          <h2 class="error"><%= pluralize(user.errors.count, "error") %> No se pudo guardar:</h2>
 
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li class="alert alert-danger"><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% user.errors.full_messages.each do |message| %>
+                <li class="alert alert-danger"><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
-    <div align="center" class="container; form-style-9">
-      <%= label_tag(:label, "Nombre:") %>
-      <%= form.text_field :first_name %>
-      <br/>
-      <%= label_tag(:label, "Apellido:") %>
-      <%= form.text_field :last_name %>
-      <br/>
-      <%= label_tag(:label, "Teléfono:") %>
-      <%= form.text_field :phone %>
-      <br/>
-      <%= label_tag(:label, "Identificación:") %>
-      <%= form.text_field :id_card %>
-      <br/>
-      <%= label_tag(:label, "Correo electrónico:") %>
-      <%= form.text_field :email %>
-      <br/>
-      <%= label_tag(:label, "Contraseña:") %>
-      <%= form.password_field :password %>
+    <div class="container divLogin">
+
+      <div class="form-group alinearIzq">
+        <label for="name" class="cols-sm-2 control-label">Nombre</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+            <%= form.text_field :first_name %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group alinearIzq">
+        <label for="name" class="cols-sm-2 control-label">Apellido</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+            <%= form.text_field :last_name %>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form-group alinearIzq">
+        <label for="username" class="cols-sm-2 control-label">Cédula</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-address-card fa" aria-hidden="true"></i></span>
+            <%= form.text_field :id_card, remote: true %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group alinearIzq">
+        <label for="email" class="cols-sm-2 control-label">Correo Electronico</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+            <%= form.text_field :email %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group alinearIzq">
+        <label for="email" class="cols-sm-2 control-label">Teléfono</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+            <%= form.text_field :phone %>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form-group alinearIzq">
+        <label for="password" class="cols-sm-2 control-label">Contraseña</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+            <%= form.password_field :password %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group alinearIzq">
+        <label for="confirm" class="cols-sm-2 control-label">Confirme Contraseña</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+            <%= form.password_field :password_confirmation %>
+          </div>
+        </div>
+      </div>
       <br/>
       <div align="center">
-        <%= form.submit 'Actualizar' , :class => 'btn9 editar', :style => 'color: white; text-decoration: none' %>
+        <%= form.submit 'Guardar', :class => 'btn9 editar', :style => 'color: white; text-decoration: none' %>
         <br/><br/>
       </div>
     </div>
+
+
+    <% content_for :javascript do %>
+        <script type='test/javascript'>
+     function allnumeric(inputtxt)
+   {
+      var numbers = /^[0-9]+$/;
+      if(inputtxt.value.match(numbers))
+      {
+      alert('Your Registration number has accepted....');
+      document.form1.text1.focus();
+      return true;
+      }
+      else
+      {
+      alert('Please input numeric characters only');
+      document.form1.text1.focus();
+      return false;
+      }
+   }
+
+        </script>
+    <% end %>
+
 <% end %>
