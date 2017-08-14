@@ -4,7 +4,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<div class="form-style-9">
+<div align="center" class="form-style-9">
 
   <ul>
     <li>
@@ -21,6 +21,7 @@
 
     <li>
       <%= label_tag(:label, "Imagen:") %>
+      <br>
       <% if @rotating_image.rotating_file %>
           <%= image_tag @rotating_image.rotating_file.url(:thumb) %>
       <% end %>
