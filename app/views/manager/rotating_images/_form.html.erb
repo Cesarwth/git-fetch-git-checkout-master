@@ -14,9 +14,10 @@
     <div align="center" class="container; form-style-9">
       <%= label_tag(:label, "Descripción:") %>
       <%= form.text_field :name %>
-      <br/>
+      <br/><br/><br/>
       <%= image_tag rotating_image.rotating_file.url(:medium) %>
-      <br/>
+      <br/><br/><br/>
+      <%= label_tag(:label, "Seleccione Imagen") %>
       <%= form.file_field :rotating_file %>
       <br/><br/><br/>
       <div align="center">
