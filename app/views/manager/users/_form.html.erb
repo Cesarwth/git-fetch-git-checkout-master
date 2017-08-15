@@ -18,7 +18,7 @@
         <div class="cols-sm-10">
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-            <%= form.text_field :first_name %>
+            <%= form.text_field :first_name ,required: true%>
           </div>
         </div>
       </div>
@@ -28,7 +28,7 @@
         <div class="cols-sm-10">
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-            <%= form.text_field :last_name %>
+            <%= form.text_field :last_name ,required: true%>
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@
         <div class="cols-sm-10">
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-address-card fa" aria-hidden="true"></i></span>
-            <%= form.text_field :id_card, remote: true %>
+            <%= form.text_field :id_card, remote: true,required: true %>
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@
         <div class="cols-sm-10">
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-            <%= form.text_field :email %>
+            <%= form.text_field :email,required: true %>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@
         <div class="cols-sm-10">
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
-            <%= form.text_field :phone %>
+            <%= form.text_field :phone,required: true %>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
         <div class="cols-sm-10">
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-            <%= form.password_field :password %>
+            <%= form.password_field :password,required: true %>
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@
         <div class="cols-sm-10">
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-            <%= form.password_field :password_confirmation %>
+            <%= form.password_field :password_confirmation,required: true %>
           </div>
         </div>
       </div>
