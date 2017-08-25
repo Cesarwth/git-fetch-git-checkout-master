@@ -4,11 +4,13 @@
     padding: 10px 22px;
     font-size: 16px;
     cursor: pointer;
+    padding-top: 2px;
 }
 
 .normal {
     background-color: #4CAF50;
     padding: 7px 20px;
+  padding-top: 2px;
 }
 
 /* Green */
@@ -17,11 +19,13 @@
     padding: 12px 22px;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+  padding-top: 2px;
 }
 
 .info {
     background-color: #2196F3;
-    color: white
+    color: white;
+  padding-top: 2px;
 }
 
 .info:hover {
@@ -29,12 +33,14 @@
     padding: 12px 22px;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+  padding-top: 2px;
 }
 
 .editar {
     background-color: #216288;
     color: white;
     padding: 7px 20px;
+  padding-top: 2px;
 }
 
 .editar:hover {
@@ -42,12 +48,14 @@
     padding: 12px 22px;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+  padding-top: 2px;
 }
 
 
 .salir {
     border-radius: 15px;
     background-color: #ff9800;
+  padding-top: 2px;
 }
 
 /* Orange */
@@ -56,11 +64,13 @@
     padding: 14px 22px;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+  padding-top: 2px;
 }
 
 .borrar {
     background-color: #f44336;
     padding: 7px 20px;
+  padding-top: 2px;
 }
 
 /* Red */
@@ -68,6 +78,7 @@
     background: #da190b;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+  padding-top: 2px;
 }
 
 /*.tab9{
@@ -84,24 +95,28 @@
     background-color: #3380cc;
     color: white;
     border-left: 10px solid #216288;
+  padding-top: 2px;
 }
 
 .infoGreen{
     background-color: #009688;
     color: white;
     border-left: 10px solid #4CAF50;
+  padding-top: 2px;
 }
 
 .infoGrape{
     background-color: #8033cc;
     color: white;
     border-left: 10px solid #8000ff;
+  padding-top: 2px;
 }
 
 .infoOrange{
     background-color: #f2800d;
     color: white;
     border-left: 10px solid #ff8000;
+  padding-top: 2px;
 }
 
 .divLogin{
@@ -113,10 +128,12 @@
     box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
     border-radius: 10px;
     border: 3px solid #305A72;
+  padding-top: 2px;
 }
 
 .alinearIzq{
     margin-left: 200px;
+  padding-top: 2px;
 }
 
 /*azul saturado 3380cc  azul info 0080ff*/
