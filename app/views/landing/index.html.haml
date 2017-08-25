@@ -58,7 +58,7 @@
         - @rotating_images.order("position").each_with_index do |rotating, index|
           - if index.zero?
             .item.active
-              %img.img-responsive{:alt => rotating.name, src: image_url(rotating.rotating_file.url(:original)) , :height => "100%", :width =>"100%"}
+              %img.img-responsive{:alt => rotating.name, src: image_url(rotating.rotating_file.url(:original)) , :height => "100%", :width =>"100%" }
               .container
               .carousel-caption
                 %h4{:style => "text-align: justify"}
