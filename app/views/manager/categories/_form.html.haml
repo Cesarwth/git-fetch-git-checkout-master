@@ -1,0 +1,50 @@
+= form_for([:manager, @category]) do |form|
+  - if category.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(category.errors.count, "error")
+        prohibited this category from being saved:
+      %ul
+        - category.errors.full_messages.each do |message|
+          %li= message
+  .form-style-9{:align => "center", :class => "container;"}
+    = label_tag(:label, "Titulo:")
+    = form.text_field :title
+    %br/
+    = label_tag(:label, "Descripción:")
+    = form.text_area :description
+    %br/
+    %br/
+    %br/
+    = image_tag category.image.url(:thumb)
+    %br/
+    %br/
+    %br/
+    = label_tag(:label, "Seleccione Imagen")
+    = form.file_field :image
+    %br/
+    %br/
+    = form.check_box(:show_docs)
+    = label_tag(:label, "Mostrar documentos")
+    %br/
+    %br/
+    = label_tag(:label, "Archivo 1:")
+    = form.file_field :doc1
+    = label_tag(:label, category.doc1.original_filename)
+    = link_to "Like", '...', class: 'vote', method: :put, remote: true, data: {:confirm => '¿Está seguro que desea eliminar el documento para esta categoría?'}, class: 'btn btn-default'
+
+    %br/
+    %br/
+    = label_tag(:label, "Archivo 2")
+    = form.file_field :doc2
+    = label_tag(:label, category.doc2.original_filename)
+    %br/
+    %br/
+    = label_tag(:label, "Archivo 3")
+    = form.file_field :doc3
+    = label_tag(:label, category.doc3.original_filename)
+    %br/
+    %div{:align => "center"}
+      = form.submit 'Actualizar', :class => 'btn9 editar', :style => 'color: white; text-decoration: none'
+      %br/
+      %br/
