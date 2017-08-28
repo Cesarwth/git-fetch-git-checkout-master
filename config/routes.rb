@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   namespace :manager do
     root 'dashboard#index'
-    resources :categories, :users, :contacts, :rotating_images
+    resources :users, :contacts, :rotating_images
+    resources :categories do
+      get 'download_document'
+    end
   end
 end

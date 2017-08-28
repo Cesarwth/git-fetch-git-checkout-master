@@ -30,19 +30,17 @@
     %br/
     = label_tag(:label, "Archivo 1:")
     = form.file_field :doc1
-    = label_tag(:label, category.doc1.original_filename)
-    = link_to "Like", '...', class: 'vote', method: :put, remote: true, data: {:confirm => '¿Está seguro que desea eliminar el documento para esta categoría?'}, class: 'btn btn-default'
-
+    = link_to_if(@category.doc1.exists?, "#{@category.doc1.original_filename}", manager_category_download_document_path(@category.doc1), method: :get, remote: true)
     %br/
     %br/
     = label_tag(:label, "Archivo 2")
     = form.file_field :doc2
-    = label_tag(:label, category.doc2.original_filename)
+    = link_to_if(@category.doc2.exists?, "#{@category.doc2.original_filename}", manager_category_download_document_path(@category.doc2), method: :get, remote: true)
     %br/
     %br/
     = label_tag(:label, "Archivo 3")
     = form.file_field :doc3
-    = label_tag(:label, category.doc3.original_filename)
+    = link_to_if(@category.doc3.exists?, "#{@category.doc3.original_filename}", manager_category_download_document_path(@category.doc3), method: :get, remote: true)
     %br/
     %div{:align => "center"}
       = form.submit 'Actualizar', :class => 'btn9 editar', :style => 'color: white; text-decoration: none'

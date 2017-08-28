@@ -73,4 +73,8 @@ class Manager::CategoriesController < ApplicationController
     params.require(:category).permit(:title, :description, :image, :show_docs, :doc1, :doc2, :doc3)
   end
 
+  def download_document
+    send_file @category.avatar.path, :type => user.avatar_content_type
+  end
+
 end
