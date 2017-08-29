@@ -20,4 +20,6 @@ class User < ApplicationRecord
   def admin?
     self.role.name == 'admin'
   end
+
+  enum role: { manager: 'manager', admin: 'admin' }
 end
