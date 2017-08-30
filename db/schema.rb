@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170722213556) do
+ActiveRecord::Schema.define(version: 20170830055857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,19 @@ ActiveRecord::Schema.define(version: 20170722213556) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+    t.string "doc1_file_name"
+    t.string "doc1_content_type"
+    t.integer "doc1_file_size"
+    t.datetime "doc1_updated_at"
+    t.string "doc2_file_name"
+    t.string "doc2_content_type"
+    t.integer "doc2_file_size"
+    t.datetime "doc2_updated_at"
+    t.string "doc3_file_name"
+    t.string "doc3_content_type"
+    t.integer "doc3_file_size"
+    t.datetime "doc3_updated_at"
+    t.boolean "show_docs"
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -65,11 +78,6 @@ ActiveRecord::Schema.define(version: 20170722213556) do
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "roles_users", id: false, force: :cascade do |t|
-    t.bigint "role_id", null: false
-    t.bigint "user_id", null: false
   end
 
   create_table "rotating_images", force: :cascade do |t|
@@ -103,9 +111,12 @@ ActiveRecord::Schema.define(version: 20170722213556) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
+    t.bigint "role_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["role_id"], name: "index_users_on_role_id"
   end
 
   add_foreign_key "documents", "categories"
+  add_foreign_key "users", "roles"
 end
