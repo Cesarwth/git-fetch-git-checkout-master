@@ -45,6 +45,16 @@
       </div>
 
       <div class="form-group alinearIzq">
+        <label for="role_ids" class="cols-sm-2 control-label">Rol</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-address-card fa" aria-hidden="true"></i></span>
+            <%= form.collection_select :role_ids, Role.order(:name),:id,:name, include_blank: false, required: true, selected: @user.roles&.first&.id %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group alinearIzq">
         <label for="email" class="cols-sm-2 control-label">Correo Electrónico</label>
         <div class="cols-sm-10">
           <div class="input-group">
@@ -64,7 +74,7 @@
         </div>
       </div>
 
-
+    <% if @user.new_record? %>
       <div class="form-group alinearIzq">
         <label for="password" class="cols-sm-2 control-label">Contraseña</label>
         <div class="cols-sm-10">
@@ -84,6 +94,7 @@
           </div>
         </div>
       </div>
+    <% end %>
       <br/>
       <div align="center">
         <%= form.submit 'Guardar', :class => 'btn9 editar', :style => 'color: white; text-decoration: none' %>
