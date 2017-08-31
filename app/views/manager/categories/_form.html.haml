@@ -30,17 +30,17 @@
     %br/
     = label_tag(:label, "Archivo 1:")
     = form.file_field :doc1
-    = link_to_if(@category.doc1.exists?, "#{@category.doc1.original_filename}", manager_category_download_document_path(@category.doc1), method: :get, remote: true)
+    = link_to_if(@category.doc1.exists?, "#{@category.doc1.original_filename}", download_document_path(path: @category.doc1.path, type: @category.doc1.content_type), method: :get)
     %br/
     %br/
     = label_tag(:label, "Archivo 2")
     = form.file_field :doc2
-    = link_to_if(@category.doc2.exists?, "#{@category.doc2.original_filename}", manager_category_download_document_path(@category.doc2), method: :get, remote: true)
+    = link_to_if(@category.doc1.exists?, "#{@category.doc1.original_filename}", download_document_path(path: @category.doc1.path, type: @category.doc1.content_type), method: :get)
     %br/
     %br/
     = label_tag(:label, "Archivo 3")
     = form.file_field :doc3
-    = link_to_if(@category.doc3.exists?, "#{@category.doc3.original_filename}", manager_category_download_document_path(@category.doc3), method: :get, remote: true)
+    = link_to_if(@category.doc1.exists?, "#{@category.doc1.original_filename}", download_document_path(path: @category.doc1.path, type: @category.doc1.content_type), method: :get)
     %br/
     %div{:align => "center"}
       = form.submit 'Actualizar', :class => 'btn9 editar', :style => 'color: white; text-decoration: none'
