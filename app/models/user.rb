@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_and_belongs_to_many :roles
+  belongs_to :role
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable,
@@ -18,6 +18,6 @@ class User < ApplicationRecord
 
 
   def admin?
-    self.roles.where(:name => 'admin').count > 0
+    self.role.name == 'admin'
   end
 end
