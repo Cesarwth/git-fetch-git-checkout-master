@@ -1,6 +1,6 @@
 class Manager::CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:download_document]
   # GET /categories
   # GET /categories.json
   def index
