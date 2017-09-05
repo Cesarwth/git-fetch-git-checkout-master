@@ -11,15 +11,36 @@
     </div>
   <% end %>
 
-    <div align="center" class="container; form-style-9">
-      <%= label_tag(:label, "Descripción:") %>
-      <%= form.text_field :name %>
-      <br/><br/><br/>
-      <%= image_tag rotating_image.rotating_file.url(:medium) %>
-      <br/><br/><br/>
-      <%= label_tag(:label, "Seleccione Imagen") %>
-      <%= form.file_field :rotating_file %>
-      <br/><br/><br/>
+    <div class="container divLogin">
+
+      <div class="form-group">
+        <label for="name" class="cols-sm-2 control-label">Descripción</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+            <%= form.text_area :name %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group" align="center">
+        <label for="name" class="cols-sm-2 control-label">Imagen</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <%= image_tag rotating_image.rotating_file.url(:medium) %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group" align="center">
+        <label for="name" class="cols-sm-2 control-label">Seleccione Imagen</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <%= form.file_field :rotating_file %>
+          </div>
+        </div>
+      </div>
+
       <div align="center">
         <%= form.submit 'Actualizar' , :class => 'btn9 editar', :style => 'color: white; text-decoration: none' %>
         <br/><br/>

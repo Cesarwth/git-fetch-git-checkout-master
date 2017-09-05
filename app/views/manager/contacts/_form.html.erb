@@ -11,28 +11,42 @@
     </div>
   <% end %>
 
-  <div class="form-style-9">
+    <div class="container divLogin">
 
-    <ul>
-      <li>
-    <%= label_tag(:label, "Dirección:") %>
-    <%= form.text_field :address %>
-    <br></li>
+    <div class="form-group">
+      <label for="name" class="cols-sm-2 control-label">Dirección</label>
+      <div class="cols-sm-10">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+          <%= form.text_field :address ,required: true%>
+        </div>
+      </div>
+    </div>
 
-      <li>
-    <%= label_tag(:label, "Teléfono:") %>
-    <%= form.text_field :phone %><br>
-      </li>
+      <div class="form-group">
+        <label for="name" class="cols-sm-2 control-label">Teléfono</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+            <%= form.text_field :phone ,required: true%>
+          </div>
+        </div>
+      </div>
 
-      <li>
-    <%= label_tag(:label, "Mail:") %>
-    <%= form.text_field :email %><br>
-      </li>
+      <div class="form-group">
+        <label for="name" class="cols-sm-2 control-label">Correo Electrónico</label>
+        <div class="cols-sm-10">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+            <%= form.text_field :email ,required: true%>
+          </div>
+        </div>
+      </div>
 
       <div align="center">
         <%= form.submit 'Actualizar' , :class => 'btn9 editar', :style => 'color: white; text-decoration: none' %>
       </div>
 
-    </ul>
+
   </div>
 <% end %>

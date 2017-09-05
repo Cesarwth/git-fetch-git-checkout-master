@@ -4,47 +4,45 @@
 <h1>Contáctenos</h1>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <div class="form-style-9">
+  <div class="container divLogin">
     <% @contacts.each do |contact| %>
 
 
-        <ul>
-          <li>
-      <%= label_tag(:label, "Dirección: ") %>
-      <%= contact.address %><br>
-          </li>
+        <div class="form-group">
+          <label for="name" class="cols-sm-2 control-label">Dirección</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+              <%= contact.address %>
+            </div>
+          </div>
+        </div>
 
-          <li>
-      <%= label_tag(:label, "Teléfono:") %>
-      <%= contact.phone%><br>
-          </li>
+        <div class="form-group">
+          <label for="name" class="cols-sm-2 control-label">Teléfono</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+              <%= contact.phone%>
+            </div>
+          </div>
+        </div>
 
-          <li>
-      <%= label_tag(:label, "Mail:") %>
-      <%= contact.email %><br>
-          </li>
-        </ul>
+        <div class="form-group">
+          <label for="name" class="cols-sm-2 control-label">Correo Electrónico</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+              <%= contact.email %>
+            </div>
+          </div>
+        </div>
 
+  </div>
         <div align="center">
           <%= link_to 'Editar' ,edit_manager_contact_path(contact), class: 'btn9 editar', style: 'color: white; text-decoration: none', method: :get %>
 
         </div>
 
-    <% end %>
-  </div>
   </body>
-</table>
-
-<br>
-
-
-
-<%#=Comentario para que no muestre boton de nuevo%>
-<%#=<%= link_to 'New Contact', new_manager_contact_path %>
+    <% end %>

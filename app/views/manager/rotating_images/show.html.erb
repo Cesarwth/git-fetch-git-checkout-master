@@ -4,29 +4,32 @@
 
 <p id="notice"><%= notice %></p>
 
-<div align="center" class="form-style-9">
+<div class="container divLogin">
 
-  <ul>
-    <li>
-      <%= label_tag(:label, "Posición:") %>
-      <%= @rotating_image.position %>
-      <br></li>
+  <div class="form-group" align="center">
+    <label for="name" class="cols-sm-2 control-label">Posición: </label>
+    <%= @rotating_image.position %>
+  </div>
 
-    <li>
+  <div class="form-group" align="center">
+    <label for="name" class="cols-sm-2 control-label">Descripción</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <%= @rotating_image.name %>
+      </div>
+    </div>
+  </div>
 
-      <%= label_tag(:label, "Título:") %>
-      <%= @rotating_image.name %>
-      <br></li>
-
-
-    <li>
-      <%= label_tag(:label, "Imagen:") %>
-      <br>
-      <% if @rotating_image.rotating_file %>
-          <%= image_tag @rotating_image.rotating_file.url(:thumb) %>
-      <% end %>
-    </li>
-  </ul>
+  <div class="form-group" align="center">
+    <label for="name" class="cols-sm-2 control-label">Imagen</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <% if @rotating_image.rotating_file %>
+            <%= image_tag @rotating_image.rotating_file.url(:medium) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div align="center">

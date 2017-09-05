@@ -4,34 +4,43 @@
 
 <p id="notice"><%= notice %></p>
 
-<div align="center" class="form-style-9">
-
-  <ul>
-    <li>
-
-      <%= label_tag(:label, "Título:") %>
-      <%= @category.title %>
-      <br></li>
-
-      <li>
-      <%= label_tag(:label, "Descripción:") %>
-      <%= @category.description %>
-        <br></li>
-
-      <li>
-        <%= label_tag(:label, "Posición:") %>
-       <%= @category.position %>
-      <br></li>
+<div class="container divLogin">
 
 
-    <li>
-      <%= label_tag(:label, "Imagen:") %>
-      <br>
-      <% if @category.image %>
-          <%= image_tag @category.image.url(:thumb) %>
-      <% end %>
-    </li>
-  </ul>
+  <div class="form-group" align="center">
+    <label for="name" class="cols-sm-2 control-label">Título</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <%= @category.title %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group" align="center">
+    <label for="name" class="cols-sm-2 control-label">Descripción</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <%= @category.description %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group" align="center">
+    <label for="name" class="cols-sm-2 control-label">Posición: </label>
+        <%= @category.position %>
+  </div>
+
+  <div class="form-group" align="center">
+    <label for="name" class="cols-sm-2 control-label">Imagen</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <% if @category.image %>
+            <%= image_tag @category.image.url(:thumb) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div align="center">
