@@ -4,25 +4,38 @@
 
 <p id="notice"><%= notice %></p>
 
-<div class="form-style-9">
+<div class="container divLogin">
 
-  <ul>
-    <li>
-      <%= label_tag(:label, "Dirección:") %>
-      <%= @contact.address %>
-      <br></li>
+  <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label">Dirección</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+        <%= @contact.address %>
+      </div>
+    </div>
+  </div>
 
-    <li>
-      <%= label_tag(:label, "Teléfono:") %>
-      <%= @contact.phone %><br>
-    </li>
+  <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label">Teléfono</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+        <%= @contact.phone %>
+      </div>
+    </div>
+  </div>
 
-    <li>
-      <%= label_tag(:label, "Mail:") %>
-      <%= @contact.email%><br>
-    </li>
+  <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label">Correo Electrónico</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+        <%= @contact.email%>
+      </div>
+    </div>
+  </div>
 
-  </ul>
 </div>
 
 <div align="center">

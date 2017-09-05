@@ -4,25 +4,58 @@
 
 <p id="notice"><%= notice %></p>
 
-<div align="center" class="container; form-style-9">
-  <%= label_tag(:label, "Nombre:") %>
-  <%= @user.first_name %>
-  <br/>
-  <%= label_tag(:label, "Apellido:") %>
-  <%= @user.last_name %>
-  <br/>
-  <%= label_tag(:label, "Teléfono:") %>
-  <%= @user.phone %>
-  <br/>
-  <%= label_tag(:label, "Cédula de identidad:") %>
-  <%= @user.id_card %>
-  <br/>
-  <%= label_tag(:label, "Correo electrónico:") %>
-  <%= @user.email %>
-  <br/>
-  <%= label_tag(:label, "Contraseña:") %>
-  <%= @user.encrypted_password %>
-  <br/>
+<div class="container divLogin">
+
+  <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label">Nombre</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+        <%= @user.first_name %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label">Apellido</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+        <%= @user.last_name %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="username" class="cols-sm-2 control-label">Cédula</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-address-card fa" aria-hidden="true"></i></span>
+        <%= @user.id_card %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email" class="cols-sm-2 control-label">Correo Electrónico</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+        <%= @user.email %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email" class="cols-sm-2 control-label">Teléfono</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+        <%= @user.phone %>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div align="center">
