@@ -15,7 +15,7 @@
 
   %body#page-top.index
     / Menu de navegación
-    %nav#mainNav.navbar.navbar-default.navbar-fixed-top.navbar-custom{style: 'position: relative; margin-bottom: auto'}
+    %nav#mainNav.navbar.navbar-default.navbar-fixed-top.navbar-custom{style: 'position: fixed; margin-bottom: auto'}
       .container
         / Diseño responsive para poder visualizarlo en dispositivos mobiles
         .navbar-header.page-scroll
@@ -48,7 +48,7 @@
               %a{:href => "/users/sign_in"} Iniciar Sesión
 
     /Sección imagenes rotativas
-    .container-fluid.row
+    .container-fluid.row{style: 'padding-top: 50px'}
       #myCarousel.carousel.slide
         %ol.carousel-indicators
           %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
@@ -86,10 +86,10 @@
         .row
         - @categories.order("position").each_with_index do |category, index|
           .col-sm-4.category-item
-            %a.category-link{'data-toggle': 'modal', 'data-target': "##{dom_id(category)}"}
+            %a.link_to{'data-toggle': 'modal', 'data-target': "##{dom_id(category)}"}
               .caption
                 .caption-content
-                  %i.fa.fa-search-plus.fa-3x
+                  %i
               %img.img-responsive{:alt => "", src: asset_path(category.image.url(:original))}
     / Seccion de contáctenos
     / Prueba formulario
