@@ -69,5 +69,5 @@ gem 'activeadmin'
 
 # Plus integrations with:
 gem 'devise'
-
 gem 'paperclip', '~> 5.0.0'
+gem 'paperclip-i18n'

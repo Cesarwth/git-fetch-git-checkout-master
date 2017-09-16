@@ -15,7 +15,7 @@
 
   %body#page-top.index
     / Menu de navegación
-    %nav#mainNav.navbar.navbar-default.navbar-fixed-top.navbar-custom{style: 'position: relative; margin-bottom: auto'}
+    %nav#mainNav.navbar.navbar-default.navbar-fixed-top.navbar-custom{style: 'position: fixed; margin-bottom: auto'}
       .container
         / Diseño responsive para poder visualizarlo en dispositivos mobiles
         .navbar-header.page-scroll
@@ -48,7 +48,7 @@
               %a{:href => "/users/sign_in"} Iniciar Sesión
 
     /Sección imagenes rotativas
-    .container-fluid.row
+    .container-fluid.row{style: 'padding-top: 50px'}
       #myCarousel.carousel.slide
         %ol.carousel-indicators
           %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
@@ -86,10 +86,10 @@
         .row
         - @categories.order("position").each_with_index do |category, index|
           .col-sm-4.category-item
-            %a.category-link{'data-toggle': 'modal', 'data-target': "##{dom_id(category)}"}
+            %a.link_to{'data-toggle': 'modal', 'data-target': "##{dom_id(category)}"}
               .caption
                 .caption-content
-                  %i.fa.fa-search-plus.fa-3x
+                  %i
               %img.img-responsive{:alt => "", src: asset_path(category.image.url(:original))}
     / Seccion de contáctenos
     / Prueba formulario
@@ -182,6 +182,13 @@
                   #{category.title}
                 %hr.star-primary/
                 %p #{category.description}
+                - if category.show_docs
+                  = link_to_if(category.doc1.exists?, "#{category.doc1.original_filename}", download_document_path(path: category.doc1.path, type: category.doc1.content_type), method: :get)
+                  %br
+                  = link_to_if(category.doc2.exists?, "#{category.doc2.original_filename}", download_document_path(path: category.doc2.path, type: category.doc2.content_type), method: :get)
+                  %br
+                  = link_to_if(category.doc3.exists?, "#{category.doc3.original_filename}", download_document_path(path: category.doc3.path, type: category.doc3.content_type), method: :get)
+                  %br
                 %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
                   %i.fa.fa-times
                   Cerrar
