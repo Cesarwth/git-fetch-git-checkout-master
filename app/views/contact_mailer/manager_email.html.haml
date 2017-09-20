@@ -1,0 +1,11 @@
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", 'http-equiv':"Content-Type"}
+  %body
+    %p Estimado administrador:
+    %p
+      Un nuevo contacto ha registrado sus datos en el sistema:
+      ="Nombre: #{user_info['name']}"
+      ="Correo electrónico: #{user_info['email']}"
+      ="Número de teléfono: #{user_info['phone']}"
+      ="Mensaje: #{user_info['message']}"
