@@ -7,42 +7,63 @@
       %ul
         - category.errors.full_messages.each do |message|
           %li= message
-  .form-style-9{:align => "center", :class => "container;"}
-    = label_tag(:label, "Titulo:")
-    = form.text_field :title
-    %br/
-    = label_tag(:label, "Descripción:")
-    = form.text_area :description
-    %br/
-    %br/
-    %br/
-    = image_tag category.image.url(:thumb)
-    %br/
-    %br/
-    %br/
-    = label_tag(:label, "Seleccione Imagen")
-    = form.file_field :image
-    %br/
-    %br/
-    = form.check_box(:show_docs)
-    = label_tag(:label, "Mostrar documentos")
-    %br/
-    %br/
-    = label_tag(:label, "Archivo 1:")
-    = form.file_field :doc1
-    = link_to_if(@category.doc1.exists?, "#{@category.doc1.original_filename}", download_document_path(path: @category.doc1.path, type: @category.doc1.content_type), method: :get)
-    %br/
-    %br/
-    = label_tag(:label, "Archivo 2")
-    = form.file_field :doc2
-    = link_to_if(@category.doc1.exists?, "#{@category.doc1.original_filename}", download_document_path(path: @category.doc1.path, type: @category.doc1.content_type), method: :get)
-    %br/
-    %br/
-    = label_tag(:label, "Archivo 3")
-    = form.file_field :doc3
-    = link_to_if(@category.doc1.exists?, "#{@category.doc1.original_filename}", download_document_path(path: @category.doc1.path, type: @category.doc1.content_type), method: :get)
+
+
+
+  .divLogin.container
+
+    .form-group
+    %label.cols-sm-2.control-label{:for => "name"} Título
+    .cols-sm-10
+      .input-group
+        %span.input-group-addon
+          %i.fa.fa-pencil{"aria-hidden" => "true"}
+        = form.text_field :title
+    .form-group
+    %label.cols-sm-2.control-label{:for => "name"} Descripción
+    .cols-sm-10
+      .input-group
+        %span.input-group-addon
+          %i.fa.fa-pencil{"aria-hidden" => "true"}
+        = form.text_area :description
+    .form-group{:align => "center"}
+      %label.cols-sm-2.control-label{:for => "name"} Imagen
+      .cols-sm-10
+        .input-group
+        = image_tag category.image.url(:thumb)
+    .form-group{:align => "center"}
+      %label.cols-sm-2.control-label{:for => "name"} Seleccione Imagen
+      .cols-sm-10
+        .input-group
+          = form.file_field :image
+
+    .form-group{:align => "center"}
+      .cols-sm-10
+        .input-group
+      = form.check_box(:show_docs)
+      = label_tag(:label, "Mostrar documentos")
+
+    .form-group{:align => "center"}
+      .cols-sm-10
+        .input-group
+      = label_tag(:label, "Archivo 1:")
+      = form.file_field :doc1
+      = link_to_if(@category.doc1.exists?, "#{@category.doc1.original_filename}", download_document_path(path: @category.doc1.path, type: @category.doc1.content_type), method: :get)
+
+    .form-group{:align => "center"}
+      .cols-sm-10
+        .input-group
+      = label_tag(:label, "Archivo 2")
+      = form.file_field :doc2
+      = link_to_if(@category.doc1.exists?, "#{@category.doc1.original_filename}", download_document_path(path: @category.doc1.path, type: @category.doc1.content_type), method: :get)
+
+    .form-group{:align => "center"}
+      .cols-sm-10
+        .input-group
+      = label_tag(:label, "Archivo 3")
+      = form.file_field :doc3
+      = link_to_if(@category.doc1.exists?, "#{@category.doc1.original_filename}", download_document_path(path: @category.doc1.path, type: @category.doc1.content_type), method: :get)
     %br/
     %div{:align => "center"}
       = form.submit 'Actualizar', :class => 'btn9 editar', :style => 'color: white; text-decoration: none'
-      %br/
-      %br/
+
