@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-//= require contact_me
 //= require jqBootstrapValidation
 //= require freelancer
 //= require freelancer-min
