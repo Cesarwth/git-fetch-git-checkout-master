@@ -62,13 +62,13 @@
                 %img.img-resposive{:alt => rotating.name, src: image_url(rotating.rotating_file.url(:original)), style: "width: 100%; height: 100%" }}
                 .carousel-caption
                   %h4{:style => "text-align: justify"}
-                    = rotating.name
+                    = raw rotating.name
             - else
               .item
                 %img.img-resposive{:alt => rotating.name, src: image_url(rotating.rotating_file.url(:original)), style: "width: 100%; height: 100%"}
                 .carousel-caption
                   %h4{:style => "text-align: justify"}
-                    = rotating.name
+                    = raw rotating.name
 
         / Controls
         %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
@@ -181,7 +181,7 @@
                 %h2
                   #{category.title}
                 %hr.star-primary/
-                %p #{category.description}
+                %p #{raw category.description}
                 - if category.show_docs
                   = link_to_if(category.doc1.exists?, "#{category.doc1.original_filename}", download_document_path(path: category.doc1.path, type: category.doc1.content_type), method: :get)
                   %br

@@ -18,7 +18,7 @@
   <% @categories.each do |category| %>
 
         <td><%= category.title %></td>
-        <td><%= category.description %></td>
+        <td><%= raw category.description %></td>
         <td><%= category.position %></td>
         <td>
           <% if category.image %>
