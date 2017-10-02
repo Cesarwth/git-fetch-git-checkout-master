@@ -59,7 +59,7 @@
           - @rotating_images.order("position").each_with_index do |rotating, index|
             - if index.zero?
               .item.active
-                %img.img-resposive{:alt => rotating.name, src: image_url(rotating.rotating_file.url(:original)), style: "width: 100%; height: 100%" }}
+                %img.img-resposive{:alt => rotating.name, src: image_url(rotating.rotating_file.url(:original)), style: "width: 100%; height: 100%" }
                 .carousel-caption
                   %h4{:style => "text-align: justify"}
                     = raw rotating.name
