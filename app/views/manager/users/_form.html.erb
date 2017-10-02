@@ -1,11 +1,10 @@
 <%= form_for([:manager, @user]) do |form| %>
     <% if user.errors.any? %>
         <div id="error_explanation">
-          <h2 class="error"><%= pluralize(user.errors.count, "error") %> No se pudo guardar:</h2>
-
-          <ul>
+          <h2 class="messError"> No se pudo guardar:</h2>
+          <ul class="msjError">
             <% user.errors.full_messages.each do |message| %>
-                <li class="alert alert-danger"><%= message %></li>
+                <li class="alert"><%= message %></li>
             <% end %>
           </ul>
         </div>
