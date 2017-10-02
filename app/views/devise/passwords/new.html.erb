@@ -1,16 +1,55 @@
-<h2>¿Olvidó su contraseña?</h2>
+<style>
+  body {
+    background-image: url('/apartmentDif.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  .bgimg {
+    background-image: url('/apartmentDif.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+  .bgimg2 {
+    background-position: center;
+    background-size: cover;
+    alignment: center;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    margin-top: 10cm;
+    background-color: white;
+  }
+</style>
+<div   class=" bgimg2">
+  <br/>
+  <br/>
+  <h1>¿Olvidó su contraseña?</h1>
 
-  <div class="field">
-    <%= f.label 'Correo electrónico' %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: {method: :post}) do |f| %>
+      <%= devise_error_messages! %>
 
-  <div class="actions">
-    <%= f.submit "Envíeme las instrucciones para restablecer la contraseña" %>
-  </div>
-<% end %>
+      <div class="field" >
+        <%= f.label 'Correo electrónico' %><br/>
+        <%= f.email_field :email, autofocus: true %>
+      </div>
 
-<%= render "devise/shared/links" %>
+      <div class="actions">
+        <%= f.submit "Envíeme las instrucciones para restablecer la contraseña" %>
+      </div>
+  <% end %>
+
+    <%= render "devise/shared/links" %>
+
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+</div>
+
+
+
