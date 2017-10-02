@@ -6,8 +6,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 
-  validates_confirmation_of :password
   validates_confirmation_of :password, :message => "Necesita confirmar la contraseña"
+  validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+  validates :phone, numericality: { only_integer: true , :message => "Ingrese solo números en Teléfono"}
+  validates :id_card, numericality: { only_integer: true, :message => "Ingrese solo números en Cédula"}
   #validates_presence_of :password_confirmation, if: -> { password.present? }
 
   #validates :first_name, :presence => {:message => "Usted debe ingresar el nombre"}, :length => {:minimum => 4, :maximum => 20, :message => "Ingrese entre 4 y 20 caracteres"}
