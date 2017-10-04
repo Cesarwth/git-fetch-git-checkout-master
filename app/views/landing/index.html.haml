@@ -62,12 +62,14 @@
                 %img.img-resposive{:alt => rotating.name, src: image_url(rotating.rotating_file.url(:original)), style: "width: 100%; height: 100%" }
                 .carousel-caption
                   %h4{:style => "text-align: justify"}
+                  .hidden-xs
                     = raw rotating.name
             - else
               .item
                 %img.img-resposive{:alt => rotating.name, src: image_url(rotating.rotating_file.url(:original)), style: "width: 100%; height: 100%"}
                 .carousel-caption
                   %h4{:style => "text-align: justify"}
+                  .hidden-xs
                     = raw rotating.name
 
         / Controls
