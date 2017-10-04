@@ -18,7 +18,7 @@
   <tbody class="form-style-9">
 
     <% @users.each do |user| %>
-
+      <% if !user.admin?%>
       <tr >
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
@@ -27,14 +27,19 @@
         <td><%= user.email %></td>
 
         <!--<td><%= link_to 'Show', manager_user_path(user) %></td> -->
+
         <td><%#= button_to 'Editar', edit_manager_user_path(user), method: :get %>
           <%= link_to 'Editar' ,edit_manager_user_path(user), class: 'btn9 editar', style: 'color: white; text-decoration: none',method: :get  %>
         </td>
+
+        <% if user.current_sign_in_at && !user.manager?%>
         <td><%#= button_to 'Eliminar', manager_user_path(user), method: :delete, data: { confirm: 'Está segguro de eliminar la cuenta?' } %>
           <%= link_to 'Eliminar' ,manager_user_path(user), class: 'btn9 borrar', style: 'color: white; text-decoration: none',method: :delete, data: { confirm: 'Está segguro de eliminar la cuenta?'}  %>
         </td>
+        <% end %>
       </tr>
     <% end %>
+  <% end %>
   </tbody>
 </table>
 
