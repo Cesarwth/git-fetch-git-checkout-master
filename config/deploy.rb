@@ -1,5 +1,5 @@
 # Change these
-server '165.227.70.24', roles: [:web, :app, :db], primary: true
+server '13.84.220.107', roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'mtorresv@bitbucket.org:mtorresv/terranova.git'
 set :application,     'terranova'
