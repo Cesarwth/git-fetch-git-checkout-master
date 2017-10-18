@@ -17,5 +17,4 @@
 //= require jqBootstrapValidation
 //= require freelancer
 //= require freelancer-min
-//= require ckeditor/init
 //= require_tree .
